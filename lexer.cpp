@@ -19,12 +19,27 @@ Lexer::Lexer(std::string inputFile) {
     int state = 0;
     while (getline(file, line)) {
         line = trim(line);
+        line += '\n';
         ln++;
         int linePointer = 0;
+        std::string currentIntFloat = "";
         while (linePointer < line.length()) {
             char c = line[linePointer];
-            if (c == ' ' || c == '\t') {
+            if (c == ' ' || c == '\t' || c == '\n') {
                 linePointer++;
+                // special cases for int/float
+                // if it is in a valid int/float state, we add the token
+                if (state == 12 || state == 13) {
+                    addToken(currentIntFloat, ln, "int");
+                    state = 0;
+                } else if (state == 15) {
+                    addToken(currentIntFloat, ln, "float");
+                    state = 0;
+                } else if (state == 14) {
+                    // this is an error as the number ended in a .
+                    // manage the error here
+                }
+                currentIntFloat = "";
                 continue;
             }
             switch (state) {
@@ -37,16 +52,25 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                     // checking if it is an int or float literal
-                    bool isFloat = false;
-                    std::string intFloat = findIntFloat(line, &linePointer, &isFloat);
-                    if (intFloat.length() > 0) {
-                        addToken(intFloat, ln, isFloat ? "float" : "int");
+                    // case 1: if first digit is 0
+                    if (c == '0') {
+                        state = 12;
+                        currentIntFloat += c;
+                        linePointer++;
                         break;
                     }
-                    // checking if it is a string literal
-                    std::string stringLiteral = findStringLiteral(line, &linePointer);
-                    if (stringLiteral.length() > 0) {
-                        addToken(stringLiteral, ln, "string-literal");
+                    // case 2: if first digit is 1-9
+                    if (c >= '1' && c <= '9') {
+                        state = 13;
+                        currentIntFloat += c;
+                        linePointer++;
+                        break;
+                    }
+                    // case 3: if first digit is .
+                    if (c == '.') {
+                        state = 14;
+                        currentIntFloat += c;
+                        linePointer++;
                         break;
                     }
 
@@ -260,13 +284,82 @@ Lexer::Lexer(std::string inputFile) {
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
                 case 11: {
-                    // single line comment mode, only go back to state 0 if this is the last character of the line
-                    if (linePointer == line.length() - 1) {
+                    // single line comment mode, only go back to state 0 if this is the last character of the line (excluding the \n)
+                    if (linePointer == line.length() - 2) {
                         linePointer++; // will go to next line now
                         state = 0;
                         break;
                     } else {
                         linePointer++;
+                        break;
+                    }
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // A 0 was encountered, if we encounter a . it is a floating point number otherwise its a 0
+                case 12: {
+                    if (c == '.') {
+                        // this is the beginning of a floating point number
+                        state = 14;
+                        currentIntFloat += c;
+                        linePointer++;
+                        break;
+                    } else {
+                        addToken("0", ln, "int");
+                        // no need to increment linePointer here
+                        currentIntFloat = "";
+                        state = 0;
+                        break;
+                    }
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // A 1-9 int was encountered, now we can accept 0-9 or a . to begin a floating point number
+                case 13: {
+                    if (c >= '0' && c <= '9') {
+                        // self loop on this state
+                        linePointer++;
+                        currentIntFloat += c;
+                        break;
+                    } else if (c == '.') {
+                        state = 14;
+                        currentIntFloat += c;
+                        linePointer++;
+                        break;
+                    } else {
+                        addToken(currentIntFloat, ln, "int");
+                        currentIntFloat = "";
+                        // no need to increment linePointer here
+                        state = 0;
+                        break;
+                    }
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // A . was encountered, now we can accept 0-9 to begin a floating point number, in other case it is an error
+                case 14: {
+                    if (c >= '0' && c <= '9') {
+                        // this is the beginning of a floating point number
+                        state = 15;
+                        linePointer++;
+                        currentIntFloat += c;
+                        break;
+                    }
+                    // error
+
+                    currentIntFloat = "";
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // Accept [0-9]
+                case 15: {
+                    if (c >= '0' && c <= '9') {
+                        // self loop on this state
+                        linePointer++;
+                        currentIntFloat += c;
+                        break;
+                    } else {
+                        // Add the saved token and go back to state 0
+                        addToken(currentIntFloat, ln, "float");
+                        currentIntFloat = "";
+                        // no need to increment linePointer here
+                        state = 0;
                         break;
                     }
                 }
@@ -289,7 +382,8 @@ void Lexer::initializeReservedKeywords() {
         "if",
         "else",
         "true",
-        "false"
+        "false",
+        "return"
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
@@ -313,50 +407,6 @@ std::string Lexer::findWord(std::string input, int *linePointer) {
         }
     }
     return word;
-}
-
-std::string Lexer::findIntFloat(std::string input, int *linePointer, bool *isFloat) {
-    std::string word = "";
-    while (*linePointer < input.length()) {
-        char c = input[*linePointer];
-        if (c >= '0' && c <= '9') {
-            word += c;
-            (*linePointer)++;
-        } else if (c == '.') {
-            if (*isFloat) {
-                // error
-                break;
-            } else {
-                *isFloat = true;
-                word += c;
-                (*linePointer)++;
-            }
-        } else {
-            break;
-        }
-    }
-    return word;
-}
-
-std::string Lexer::findStringLiteral(std::string input, int *linePointer) {
-    std::string word = "";
-    if (input[*linePointer] != '"') {
-        return "";
-    }
-    (*linePointer)++;
-    word += '"';
-    while (*linePointer < input.length()) {
-        char c = input[*linePointer];
-        if (c == '"') {
-            word += c;
-            (*linePointer)++;
-            break;
-        } else {
-            // check special cases
-            word += c;
-            (*linePointer)++;
-        }
-    }
 }
 
 void Lexer::addToken(std::string token, int line, std::string type) {

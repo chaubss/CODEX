@@ -11,8 +11,6 @@ class Lexer {
 
     void initializeReservedKeywords();
     std::string findWord(std::string input, int *linePointer);
-    std::string findIntFloat(std::string input, int *linePointer, bool *isFloat);
-    std::string findStringLiteral(std::string input, int *linePointer);
     void addToken(std::string token, int line, std::string type);
 
     public:
