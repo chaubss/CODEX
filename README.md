@@ -2,6 +2,11 @@
 Compiler Construction Group Assignment
 
 ## Running
+Create an executable by running:
 ```
-g++ -std=c++11 main.cpp lexer.cpp token.cpp && ./a.out
+make
+```
+This will create an executable `lexer`, run it:
+```
+./lexer
 ```
