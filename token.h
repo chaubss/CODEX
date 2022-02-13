@@ -4,12 +4,13 @@
 #include <iostream>
 
 class Token {
-    std::string tokenString;
-    int lineNumber;
-    int tokenId;
 
     public:
-        Token(std::string tokenString, int lineNumber, int tokenId);
+        std::string tokenString;
+        std::string type;
+        int lineNumber;
+        int tokenId;
+        Token(std::string tokenString, int lineNumber, std::string type, int tokenId);
 };
 
 #endif

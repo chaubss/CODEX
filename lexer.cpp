@@ -12,6 +12,7 @@ std::string& trim(std::string& str) {
 }
 
 Lexer::Lexer(std::string inputFile) {
+    tokenPointer = 0;
     initializeReservedKeywords();
     std::ifstream file(inputFile);
     std::string line;
@@ -372,7 +373,7 @@ Lexer::Lexer(std::string inputFile) {
 }
 
 void Lexer::initializeReservedKeywords() {
-    std::vector<std::string> reserved = {
+    std::string reserved[] = {
         "int",
         "float",
         "boolean",
@@ -388,10 +389,6 @@ void Lexer::initializeReservedKeywords() {
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
     }
-}
-
-std::string Lexer::getNextToken() {
-    return "test";
 }
 
 std::string Lexer::findWord(std::string input, int *linePointer) {
@@ -410,5 +407,14 @@ std::string Lexer::findWord(std::string input, int *linePointer) {
 }
 
 void Lexer::addToken(std::string token, int line, std::string type) {
-    std::cout << token << "\t" << line << "\t" << type << std::endl;
+    Token t = Token(token, line, type, 1);
+    tokens.push_back(t);
+}
+
+Token* Lexer::getNextToken() {
+    if (tokenPointer < tokens.size()) {
+        return &tokens[tokenPointer++];
+    } else {
+        return NULL;
+    }
 }
