@@ -1,7 +1,7 @@
-lexer : main.o lexer.o token.o
-	g++ main.o lexer.o token.o -o lexer 
+lexer : main.o lexer.o token.o exceptions.o
+	g++ main.o lexer.o token.o exceptions.o -o lexer 
 
-main.o : main.cpp lexer.h token.h
+main.o : main.cpp lexer.h token.h exceptions.h
 	g++ -c main.cpp
 
 lexer.o : lexer.cpp lexer.h
@@ -9,3 +9,6 @@ lexer.o : lexer.cpp lexer.h
 
 token.o : token.cpp token.h
 	g++ -c token.cpp
+
+exceptions.o : exceptions.cpp exceptions.h
+	g++ -c exceptions.cpp

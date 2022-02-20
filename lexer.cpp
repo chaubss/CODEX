@@ -1,5 +1,6 @@
 #include "lexer.h"
 #include "token.h"
+#include "exceptions.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -15,6 +16,9 @@ Lexer::Lexer(std::string inputFile) {
     tokenPointer = 0;
     initializeReservedKeywords();
     std::ifstream file(inputFile);
+    if (!file.is_open()) {
+        throw FileNotFoundException(inputFile);
+    }
     std::string line;
     int ln = 0;
     int state = 0;
