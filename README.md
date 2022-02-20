@@ -8,5 +8,5 @@ make
 ```
 This will create an executable `lexer`, run it:
 ```
-./lexer
+./lexer <input file>
 ```
