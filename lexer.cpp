@@ -142,7 +142,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
 
                     // still in state 0 means invalid character 
-                        throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
+                        throw LexicalException(ln, linePointer, line, "Invalid Character: " + std::string(1, c));
 
 
                     break;
@@ -154,9 +154,9 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
-                    } else{
-                         // error
-                          throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
+                    } else {
+                        // error
+                        throw LexicalException(ln, linePointer, line, "Unexpected Character: " + std::string(1, c));
                     }
                   
                     break;
@@ -168,9 +168,9 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
-                    } else{
-                         // error
-                          throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
+                    } else {
+                        // error
+                        throw LexicalException(ln, linePointer, line, "Unexpected Character: " + std::string(1, c));
                     }
                 }
                 break;

@@ -25,8 +25,14 @@ int main(int argc, char **argv) {
     } catch (LexicalException e) {
         std::cout << "\033[1;31mLexicalException\033[0m  ";
         std::cout << "Lexical error on line " << e.getLineNumber() << std::endl << std::endl;
-        std::cout << "\033[1;32m"  << e.getLineNumber() << " \033[0m" << e.getLine() << std::endl;
+        std::cout << "\033[1;32m"  << e.getLineNumber() << " \033[0m" << e.getLine();
+        std::cout << "  ";
+        for (int i = 0; i < e.getLinePointer(); i++) {
+            std::cout << " ";
+        }
+        std::cout << "\033[1;31m^\033[0m" << std::endl;
         std::cout << "\033[1;36mMessage: \033[0m" << e.getMessage() << std::endl;
+
     }
     return 0;
 }
