@@ -8,6 +8,7 @@ int fact( int n) {
 }
 void main(void) {
     int x;
+    string s = "ye";
     x = 1;
     while (x <= 10) {
         write(x);
@@ -16,3 +17,4 @@ void main(void) {
         x = x + 1;
     }
 }
+string str1 = "hello "there" first";
