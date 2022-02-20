@@ -41,8 +41,8 @@ Lexer::Lexer(std::string inputFile) {
                     addToken(currentIntFloat, ln, "float");
                     state = 0;
                 } else if (state == 14) {
-                    // this is an error as the number ended in a .
-                    // manage the error here
+                    //maybe a float token but throw an error for now
+                    throw LexicalException(ln, linePointer,  line, "Invalid number");
                 }
                 currentIntFloat = "";
                 continue;
@@ -141,6 +141,10 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
 
+                    // still in state 0 means invalid character 
+                        throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
+
+
                     break;
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
@@ -150,8 +154,11 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
+                    } else{
+                         // error
+                          throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
                     }
-                    // error
+                  
                     break;
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
@@ -161,8 +168,10 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
+                    } else{
+                         // error
+                          throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
                     }
-                    // error
                 }
                 break;
                 ///////////////////////////////////////////////////////////////////////////////////////
