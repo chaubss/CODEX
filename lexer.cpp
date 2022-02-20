@@ -150,8 +150,11 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
+                    }else{
+                         // error
+                         throw LexicalException(ln, line, "Invalid Input Character\n");
                     }
-                    // error
+                  
                     break;
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
@@ -161,8 +164,10 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 0;
                         break;
+                    }else{
+                         // error
+                          throw LexicalException(ln, line, "Invalid Input Character\n");
                     }
-                    // error
                 }
                 break;
                 ///////////////////////////////////////////////////////////////////////////////////////
