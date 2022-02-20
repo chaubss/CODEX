@@ -1,0 +1,13 @@
+/*
+This program just has comments
+*/
+
+/*
+// An entire program within a comment
+int main() {
+    print("https://bit.ly/3JK7mSH");
+    return 0;
+}
+*/
+
+// This is another comment
