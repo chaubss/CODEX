@@ -9,6 +9,7 @@
 std::string& trim(std::string& str) {
     str = str.erase(0, str.find_first_not_of(" "));
     str = str.erase(str.find_last_not_of(" ") + 1);
+    // std::cout<<'|'<<str<<"|\n";
     return str;
 }
 
@@ -28,9 +29,10 @@ Lexer::Lexer(std::string inputFile) {
         ln++;
         int linePointer = 0;
         std::string currentIntFloat = "";
+        std::string currentString = "";
         while (linePointer < line.length()) {
             char c = line[linePointer];
-            if (c == ' ' || c == '\t' || c == '\n') {
+            if (state != 16 && (c == ' ' || c == '\t' || c == '\n')) {
                 linePointer++;
                 // special cases for int/float
                 // if it is in a valid int/float state, we add the token
@@ -138,6 +140,13 @@ Lexer::Lexer(std::string inputFile) {
                         state = 0;
                         linePointer++;
                         addToken(std::string(1, c), ln, "operator/sign");
+                        break;
+                    }
+                    // implementation of string
+                    if(c=='"'){
+                        state = 16;
+                        currentString += '"';
+                        linePointer++;
                         break;
                     }
 
@@ -366,6 +375,61 @@ Lexer::Lexer(std::string inputFile) {
                         // no need to increment linePointer here
                         state = 0;
                         break;
+                    }
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // a '"' (double quote) was encountered, marking the start of a string literal
+                case 16: {
+                    if(c == '\n' || c == '\t' || c == '\r') {
+                        // exception
+                    } else if (c != '"' && c != '\\') {
+                        currentString += c;
+                        linePointer++;
+                        break;
+                    } else if (c == '"') {  //another double quote marks the end of the string
+                        state = 0;
+                        currentString += '"';
+                        addToken(currentString,ln,"string");
+                        currentString = "";
+                        linePointer++;
+                        break;
+                    } else if (c == '\\') { // a backslash marks the presence of a potential escape character
+                        state = 17;
+                        linePointer++;
+                        break;
+                    }
+                    break;
+                }
+                ///////////////////////////////////////////////////////////////////////////////////////
+                // a backslash was encountered in the string. This could potentially be an escape character
+                case 17: {
+                    if (c == 't') {
+                        currentString += "\\t";
+                        linePointer++;
+                        state = 16;
+                        break;
+                    } else if (c == 'n') {
+                        currentString += "\\n";
+                        linePointer++;
+                        state = 16;
+                        break;
+                    } else if (c == 'r') {
+                        currentString += "\\r";
+                        linePointer++;
+                        state = 16;
+                        break;
+                    } else if (c == '"') {
+                        currentString += '"';
+                        linePointer++;
+                        state = 16;
+                        break;
+                    } else if (c == '\\') {
+                        currentString += '\\';
+                        linePointer++;
+                        state = 16;
+                        break;
+                    } else {    //throw error if it isnt a known escape character
+                        //TODO: throw invalid string exception
                     }
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
