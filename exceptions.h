@@ -12,13 +12,16 @@ class FileNotFoundException {
 
 class LexicalException {
     int lineNumber;
+    int linePointer;
     std::string message;
     std::string line;
     public:
-        LexicalException(int lineNumber, std::string line, std::string message);
+        LexicalException(int lineNumber, int linePointer, std::string line, std::string message);
         int getLineNumber();
+        int getLinePointer();
         std::string getMessage();
         std::string getLine();
 };
+
 
 #endif
