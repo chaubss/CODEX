@@ -2,6 +2,7 @@
 #include "exceptions.h"
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 int main(int argc, char **argv) {
 
@@ -17,7 +18,7 @@ int main(int argc, char **argv) {
             if (token == NULL) {
                 break;
             }
-            std::cout << token->lineNumber << "\t" << token->tokenString << "\t" << token->type << std::endl;
+            std::cout << std::left << "Token " <<std::setw(7)<< token->tokenId << "Line " << std::setw(6) << token->lineNumber << std::setw(15) << token->type << token->tokenString << std::endl << std::right;
         }
     } catch (FileNotFoundException e) {
         std::cout << "\033[1;31mFileNotFoundException\033[0m  ";

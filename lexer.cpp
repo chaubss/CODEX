@@ -14,6 +14,7 @@ std::string& trim(std::string& str) {
 
 Lexer::Lexer(std::string inputFile) {
     tokenPointer = 0;
+    newSymbolID = 1;
     initializeReservedKeywords();
     std::ifstream file(inputFile);
     if (!file.is_open()) {
@@ -465,7 +466,9 @@ void Lexer::initializeReservedKeywords() {
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
+        symbolTable[str] = newSymbolID++;   // Adding keywords to symbol table, ID starting from 1
     }
+    newSymbolID = 101;  // IDs for other tokens starting from 101
 }
 
 std::string Lexer::findWord(std::string input, int *linePointer) {
@@ -484,7 +487,9 @@ std::string Lexer::findWord(std::string input, int *linePointer) {
 }
 
 void Lexer::addToken(std::string token, int line, std::string type) {
-    Token t = Token(token, line, type, 1);
+    // Checking if current token has an entry in symbol table. If not, creating new entry.
+    if (symbolTable.find(token) == symbolTable.end()) symbolTable[token] = newSymbolID++;
+    Token t = Token(token, line, type, symbolTable[token]);
     tokens.push_back(t);
 }
 

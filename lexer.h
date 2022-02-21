@@ -5,12 +5,15 @@
 #include <iostream>
 #include <unordered_set>
 #include <vector>
+#include <map>
 
 class Lexer {
 
     std::string inputFile;
     std::unordered_set<std::string> reservedKeywords;
     std::vector<Token> tokens;
+    std::map<std::string,int> symbolTable;
+    int newSymbolID;
     int tokenPointer;
     void initializeReservedKeywords();
     std::string findWord(std::string input, int *linePointer);

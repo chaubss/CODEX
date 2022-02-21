@@ -1,31 +1,31 @@
-1	int	keyword
-1	main	identifier
-1	(	delimiter
-1	)	delimiter
-1	{	delimiter
-2	int	keyword
-2	x	identifier
-2	=	operator
-2	10	int
-2	;	delimiter
-3	int	keyword
-3	y	identifier
-3	=	operator
-3	20	int
-3	;	delimiter
-4	int	keyword
-4	z	identifier
-4	=	operator
-4	x	identifier
-4	+	operator/sign
-4	y	identifier
-4	;	delimiter
-5	print	identifier
-5	(	delimiter
-5	z	identifier
-5	)	delimiter
-5	;	delimiter
-6	return	keyword
-6	0	int
-6	;	delimiter
-7	}	delimiter
+Token 1      Line 1     keyword        int
+Token 101    Line 1     identifier     main
+Token 102    Line 1     delimiter      (
+Token 103    Line 1     delimiter      )
+Token 104    Line 1     delimiter      {
+Token 1      Line 2     keyword        int
+Token 105    Line 2     identifier     x
+Token 106    Line 2     operator       =
+Token 107    Line 2     int            10
+Token 108    Line 2     delimiter      ;
+Token 1      Line 3     keyword        int
+Token 109    Line 3     identifier     y
+Token 106    Line 3     operator       =
+Token 110    Line 3     int            20
+Token 108    Line 3     delimiter      ;
+Token 1      Line 4     keyword        int
+Token 111    Line 4     identifier     z
+Token 106    Line 4     operator       =
+Token 105    Line 4     identifier     x
+Token 112    Line 4     operator/sign  +
+Token 109    Line 4     identifier     y
+Token 108    Line 4     delimiter      ;
+Token 113    Line 5     identifier     print
+Token 102    Line 5     delimiter      (
+Token 111    Line 5     identifier     z
+Token 103    Line 5     delimiter      )
+Token 108    Line 5     delimiter      ;
+Token 11     Line 6     keyword        return
+Token 114    Line 6     int            0
+Token 108    Line 6     delimiter      ;
+Token 115    Line 7     delimiter      }
