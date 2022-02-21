@@ -1,84 +1,84 @@
-2	int	keyword
-2	main	identifier
-2	(	delimiter
-2	)	delimiter
-2	{	delimiter
-3	int	keyword
-3	operation	identifier
-3	=	operator
-3	input	identifier
-3	(	delimiter
-3	"Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /"	string
-3	)	delimiter
-3	;	delimiter
-4	int	keyword
-4	first	identifier
-4	=	operator
-4	input	identifier
-4	(	delimiter
-4	"Enter first number: "	string
-4	)	delimiter
-4	;	delimiter
-5	int	keyword
-5	second	identifier
-5	=	operator
-5	input	identifier
-5	(	delimiter
-5	"Enter second number: "	string
-5	)	delimiter
-5	;	delimiter
-6	if	keyword
-6	operation	identifier
-6	==	operator
-6	0	int
-6	{	delimiter
-7	print	identifier
-7	(	delimiter
-7	first	identifier
-7	+	operator/sign
-7	second	identifier
-7	)	delimiter
-7	;	delimiter
-8	}	delimiter
-8	else	keyword
-8	if	keyword
-8	operation	identifier
-8	==	operator
-8	1	int
-8	{	delimiter
-9	print	identifier
-9	(	delimiter
-9	first	identifier
-9	-	operator/sign
-9	second	identifier
-9	)	delimiter
-9	;	delimiter
-10	}	delimiter
-10	else	keyword
-10	if	keyword
-10	operation	identifier
-10	==	operator
-10	2	int
-10	{	delimiter
-11	print	identifier
-11	(	delimiter
-11	first	identifier
-11	*	operator
-11	second	identifier
-11	)	delimiter
-11	;	delimiter
-12	}	delimiter
-12	else	keyword
-12	{	delimiter
-13	print	identifier
-13	(	delimiter
-13	first	identifier
-13	/	operator
-13	second	identifier
-13	)	delimiter
-13	;	delimiter
-14	}	delimiter
-16	return	keyword
-16	0	int
-16	;	delimiter
-17	}	delimiter
+Token 1      Line 2     keyword        int
+Token 101    Line 2     identifier     main
+Token 102    Line 2     delimiter      (
+Token 103    Line 2     delimiter      )
+Token 104    Line 2     delimiter      {
+Token 1      Line 3     keyword        int
+Token 105    Line 3     identifier     operation
+Token 106    Line 3     operator       =
+Token 107    Line 3     identifier     input
+Token 102    Line 3     delimiter      (
+Token 108    Line 3     string         "Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /"
+Token 103    Line 3     delimiter      )
+Token 109    Line 3     delimiter      ;
+Token 1      Line 4     keyword        int
+Token 110    Line 4     identifier     first
+Token 106    Line 4     operator       =
+Token 107    Line 4     identifier     input
+Token 102    Line 4     delimiter      (
+Token 111    Line 4     string         "Enter first number: "
+Token 103    Line 4     delimiter      )
+Token 109    Line 4     delimiter      ;
+Token 1      Line 5     keyword        int
+Token 112    Line 5     identifier     second
+Token 106    Line 5     operator       =
+Token 107    Line 5     identifier     input
+Token 102    Line 5     delimiter      (
+Token 113    Line 5     string         "Enter second number: "
+Token 103    Line 5     delimiter      )
+Token 109    Line 5     delimiter      ;
+Token 7      Line 6     keyword        if
+Token 105    Line 6     identifier     operation
+Token 114    Line 6     operator       ==
+Token 115    Line 6     int            0
+Token 104    Line 6     delimiter      {
+Token 116    Line 7     identifier     print
+Token 102    Line 7     delimiter      (
+Token 110    Line 7     identifier     first
+Token 117    Line 7     operator/sign  +
+Token 112    Line 7     identifier     second
+Token 103    Line 7     delimiter      )
+Token 109    Line 7     delimiter      ;
+Token 118    Line 8     delimiter      }
+Token 8      Line 8     keyword        else
+Token 7      Line 8     keyword        if
+Token 105    Line 8     identifier     operation
+Token 114    Line 8     operator       ==
+Token 119    Line 8     int            1
+Token 104    Line 8     delimiter      {
+Token 116    Line 9     identifier     print
+Token 102    Line 9     delimiter      (
+Token 110    Line 9     identifier     first
+Token 120    Line 9     operator/sign  -
+Token 112    Line 9     identifier     second
+Token 103    Line 9     delimiter      )
+Token 109    Line 9     delimiter      ;
+Token 118    Line 10    delimiter      }
+Token 8      Line 10    keyword        else
+Token 7      Line 10    keyword        if
+Token 105    Line 10    identifier     operation
+Token 114    Line 10    operator       ==
+Token 121    Line 10    int            2
+Token 104    Line 10    delimiter      {
+Token 116    Line 11    identifier     print
+Token 102    Line 11    delimiter      (
+Token 110    Line 11    identifier     first
+Token 122    Line 11    operator       *
+Token 112    Line 11    identifier     second
+Token 103    Line 11    delimiter      )
+Token 109    Line 11    delimiter      ;
+Token 118    Line 12    delimiter      }
+Token 8      Line 12    keyword        else
+Token 104    Line 12    delimiter      {
+Token 116    Line 13    identifier     print
+Token 102    Line 13    delimiter      (
+Token 110    Line 13    identifier     first
+Token 123    Line 13    operator       /
+Token 112    Line 13    identifier     second
+Token 103    Line 13    delimiter      )
+Token 109    Line 13    delimiter      ;
+Token 118    Line 14    delimiter      }
+Token 11     Line 16    keyword        return
+Token 115    Line 16    int            0
+Token 109    Line 16    delimiter      ;
+Token 118    Line 17    delimiter      }

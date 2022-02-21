@@ -1,5 +1,5 @@
 /* A program to compute factorials */
-/*
+
 int fact( int n) {
     if (n <= 1)
         return 1;
@@ -8,7 +8,7 @@ int fact( int n) {
 }
 void main(void) {
     int x;
-    string s = "ye";
+    string s = "hello world!";
     x = 1;
     while (x <= 10) {
         write(x);
@@ -16,6 +16,4 @@ void main(void) {
         writeln();
         x = x + 1;
     }
-}*/
-string str1 = "hello
-first";
+}

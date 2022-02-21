@@ -1,14 +1,14 @@
-2	int	keyword
-2	main	identifier
-2	(	delimiter
-2	)	delimiter
-2	{	delimiter
-3	print	identifier
-3	(	delimiter
-3	"Hello world"	string
-3	)	delimiter
-3	;	delimiter
-4	return	keyword
-4	0	int
-4	;	delimiter
-5	}	delimiter
+Token 1      Line 2     keyword        int
+Token 101    Line 2     identifier     main
+Token 102    Line 2     delimiter      (
+Token 103    Line 2     delimiter      )
+Token 104    Line 2     delimiter      {
+Token 105    Line 3     identifier     print
+Token 102    Line 3     delimiter      (
+Token 106    Line 3     string         "Hello world"
+Token 103    Line 3     delimiter      )
+Token 107    Line 3     delimiter      ;
+Token 11     Line 4     keyword        return
+Token 108    Line 4     int            0
+Token 107    Line 4     delimiter      ;
+Token 109    Line 5     delimiter      }
