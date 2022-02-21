@@ -31,9 +31,9 @@ Lexer::Lexer(std::string inputFile) {
         std::string currentString = "";
         while (linePointer < line.length()) {
             char c = line[linePointer];
-            if (state != 16 && (c == ' ' || c == '\t' || c == '\n')) {
+            if ((state != 16 && c == ' ') || c == '\t' || c == '\n' || c == '\r') {
                 linePointer++;
-                // special cases for int/float
+                // special cases for int/float/string
                 // if it is in a valid int/float state, we add the token
                 if (state == 12 || state == 13) {
                     addToken(currentIntFloat, ln, "int");
@@ -42,8 +42,11 @@ Lexer::Lexer(std::string inputFile) {
                     addToken(currentIntFloat, ln, "float");
                     state = 0;
                 } else if (state == 14) {
-                    //maybe a float token but throw an error for now
-                    throw LexicalException(ln, linePointer,  line, "Invalid number");
+                    // Maybe a float token but throw an error for now
+                    throw LexicalException(ln, linePointer,  line, "Invalid number!");
+                } else if (state == 16) {
+                    // String literal contains tab, newLine, or return carriage; throw error
+                    throw LexicalException(ln, linePointer, line, "Invalid string!");
                 }
                 currentIntFloat = "";
                 continue;
@@ -142,7 +145,7 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                     // implementation of string
-                    if(c=='"'){
+                    if (c == '"'){
                         state = 16;
                         currentString += '"';
                         linePointer++;
@@ -386,22 +389,20 @@ Lexer::Lexer(std::string inputFile) {
                     }
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
-                // a '"' (double quote) was encountered, marking the start of a string literal
+                // A '"' (double quote) was encountered, marking the start of a string literal
                 case 16: {
-                    if(c == '\n' || c == '\t' || c == '\r') {
-                        // exception
-                    } else if (c != '"' && c != '\\') {
+                    if (c != '"' && c != '\\') {
                         currentString += c;
                         linePointer++;
                         break;
-                    } else if (c == '"') {  //another double quote marks the end of the string
+                    } else if (c == '"') {  // Another double quote marks the end of the string
                         state = 0;
                         currentString += '"';
-                        addToken(currentString,ln,"string");
+                        addToken(currentString, ln, "string");
                         currentString = "";
                         linePointer++;
                         break;
-                    } else if (c == '\\') { // a backslash marks the presence of a potential escape character
+                    } else if (c == '\\') { // A backslash marks the presence of a potential escape character
                         state = 17;
                         linePointer++;
                         break;
@@ -409,7 +410,7 @@ Lexer::Lexer(std::string inputFile) {
                     break;
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////
-                // a backslash was encountered in the string. This could potentially be an escape character
+                // A backslash was encountered in the string. This could potentially be an escape character
                 case 17: {
                     if (c == 't') {
                         currentString += "\\t";
@@ -436,8 +437,8 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         state = 16;
                         break;
-                    } else {    //throw error if it isnt a known escape character
-                        //TODO: throw invalid string exception
+                    } else {    // Throw error if it isnt a known escape character
+                        throw LexicalException(ln, linePointer, line, "Invalid string!");
                     }
                 }
                 ///////////////////////////////////////////////////////////////////////////////////////

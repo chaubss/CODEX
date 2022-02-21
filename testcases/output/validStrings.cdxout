@@ -1,0 +1,23 @@
+2	int	keyword
+2	main	identifier
+2	(	delimiter
+2	)	delimiter
+2	{	delimiter
+3	string	keyword
+3	s	identifier
+3	=	operator
+3	"hello world"	string
+3	;	delimiter
+4	string	keyword
+4	a	identifier
+4	=	operator
+4	"\r hello \n with " escape \ characters \t"	string
+4	;	delimiter
+5	string	keyword
+5	b	identifier
+5	=	operator
+5	"hello "	string
+5	there	identifier
+5	" world"	string
+5	;	delimiter
+6	}	delimiter
