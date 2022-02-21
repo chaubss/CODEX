@@ -12,7 +12,7 @@ class Lexer {
     std::string inputFile;
     std::unordered_set<std::string> reservedKeywords;
     std::vector<Token> tokens;
-    std::map<std::string,int> symbolTable;
+    std::map<std::string, int> symbolTable;
     int newSymbolID;
     int tokenPointer;
     void initializeReservedKeywords();
