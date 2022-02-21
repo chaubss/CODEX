@@ -1,0 +1,5 @@
+// a list of invalid strings
+int main() {
+    string s = "hello
+     world";
+}

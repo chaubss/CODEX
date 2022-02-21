@@ -1,0 +1,6 @@
+// a list of valid strings
+int main() {
+    string s = "hello world";
+    string a = "\r hello \n with \" escape \\ characters \t";
+    string b = "hello "there" world";
+}

@@ -1,5 +1,14 @@
-[1;31mLexicalException[0m  Lexical error on line 3
-
-[1;32m3 [0mprint("Hello world");
-        [1;31m^[0m
-[1;36mMessage: [0mInvalid Character: "
+2	int	keyword
+2	main	identifier
+2	(	delimiter
+2	)	delimiter
+2	{	delimiter
+3	print	identifier
+3	(	delimiter
+3	"Hello world"	string
+3	)	delimiter
+3	;	delimiter
+4	return	keyword
+4	0	int
+4	;	delimiter
+5	}	delimiter

@@ -1,5 +1,84 @@
-[1;31mLexicalException[0m  Lexical error on line 3
-
-[1;32m3 [0mint operation = input("Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /");
-                        [1;31m^[0m
-[1;36mMessage: [0mInvalid Character: "
+2	int	keyword
+2	main	identifier
+2	(	delimiter
+2	)	delimiter
+2	{	delimiter
+3	int	keyword
+3	operation	identifier
+3	=	operator
+3	input	identifier
+3	(	delimiter
+3	"Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /"	string
+3	)	delimiter
+3	;	delimiter
+4	int	keyword
+4	first	identifier
+4	=	operator
+4	input	identifier
+4	(	delimiter
+4	"Enter first number: "	string
+4	)	delimiter
+4	;	delimiter
+5	int	keyword
+5	second	identifier
+5	=	operator
+5	input	identifier
+5	(	delimiter
+5	"Enter second number: "	string
+5	)	delimiter
+5	;	delimiter
+6	if	keyword
+6	operation	identifier
+6	==	operator
+6	0	int
+6	{	delimiter
+7	print	identifier
+7	(	delimiter
+7	first	identifier
+7	+	operator/sign
+7	second	identifier
+7	)	delimiter
+7	;	delimiter
+8	}	delimiter
+8	else	keyword
+8	if	keyword
+8	operation	identifier
+8	==	operator
+8	1	int
+8	{	delimiter
+9	print	identifier
+9	(	delimiter
+9	first	identifier
+9	-	operator/sign
+9	second	identifier
+9	)	delimiter
+9	;	delimiter
+10	}	delimiter
+10	else	keyword
+10	if	keyword
+10	operation	identifier
+10	==	operator
+10	2	int
+10	{	delimiter
+11	print	identifier
+11	(	delimiter
+11	first	identifier
+11	*	operator
+11	second	identifier
+11	)	delimiter
+11	;	delimiter
+12	}	delimiter
+12	else	keyword
+12	{	delimiter
+13	print	identifier
+13	(	delimiter
+13	first	identifier
+13	/	operator
+13	second	identifier
+13	)	delimiter
+13	;	delimiter
+14	}	delimiter
+16	return	keyword
+16	0	int
+16	;	delimiter
+17	}	delimiter
