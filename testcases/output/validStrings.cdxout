@@ -1,23 +1,23 @@
-2	int	keyword
-2	main	identifier
-2	(	delimiter
-2	)	delimiter
-2	{	delimiter
-3	string	keyword
-3	s	identifier
-3	=	operator
-3	"hello world"	string
-3	;	delimiter
-4	string	keyword
-4	a	identifier
-4	=	operator
-4	"\r hello \n with " escape \ characters \t"	string
-4	;	delimiter
-5	string	keyword
-5	b	identifier
-5	=	operator
-5	"hello "	string
-5	there	identifier
-5	" world"	string
-5	;	delimiter
-6	}	delimiter
+Token 1      Line 2     keyword        int
+Token 101    Line 2     identifier     main
+Token 102    Line 2     delimiter      (
+Token 103    Line 2     delimiter      )
+Token 104    Line 2     delimiter      {
+Token 4      Line 3     keyword        string
+Token 105    Line 3     identifier     s
+Token 106    Line 3     operator       =
+Token 107    Line 3     string         "hello world"
+Token 108    Line 3     delimiter      ;
+Token 4      Line 4     keyword        string
+Token 109    Line 4     identifier     a
+Token 106    Line 4     operator       =
+Token 110    Line 4     string         "\r hello \n with " escape \ characters \t"
+Token 108    Line 4     delimiter      ;
+Token 4      Line 5     keyword        string
+Token 111    Line 5     identifier     b
+Token 106    Line 5     operator       =
+Token 112    Line 5     string         "hello "
+Token 113    Line 5     identifier     there
+Token 114    Line 5     string         " world"
+Token 108    Line 5     delimiter      ;
+Token 115    Line 6     delimiter      }
