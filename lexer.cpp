@@ -53,7 +53,7 @@ Lexer::Lexer(std::string inputFile) {
                 continue;
             }
             switch (state) {
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 0: {
                     // checking if its reserved or an identifier
                     std::string firstWord = findWord(line, &linePointer);
@@ -159,7 +159,7 @@ Lexer::Lexer(std::string inputFile) {
 
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 1: {
                     if (c == '&') {
                         addToken("&&", ln, "operator");
@@ -173,7 +173,7 @@ Lexer::Lexer(std::string inputFile) {
                   
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 2: {
                     if (c == '|') {
                         addToken("||", ln, "operator");
@@ -186,7 +186,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                 }
                 break;
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 3: {
                     if (c == '=') {
                         addToken("==", ln, "operator");
@@ -201,7 +201,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 4: {
                     if (c == '=') {
                         addToken(">=", ln, "operator");
@@ -216,7 +216,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 5: {
                     if (c == '=') {
                         addToken("<=", ln, "operator");
@@ -231,7 +231,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 6: {
                     if (c == '=') {
                         addToken("!=", ln, "operator");
@@ -246,7 +246,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 7: {
                     if (c == '=') {
                         addToken(":=", ln, "operator");
@@ -261,7 +261,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 8: {
                     if (c == '*') {
                         // multi line comment
@@ -281,7 +281,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 9: {
                     // this is a special place where the code is currently in comment mode (/*)
                     if (c == '*') {
@@ -294,7 +294,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 10: {
                     // about to escape the comment mode /* .... *
                     if (c == '/') {
@@ -308,7 +308,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 case 11: {
                     // single line comment mode, only go back to state 0 if this is the last character of the line (excluding the \n)
                     if (linePointer == line.length() - 2) {
@@ -320,7 +320,7 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // A 0 was encountered, if we encounter a . it is a floating point number otherwise its a 0
                 case 12: {
                     if (c == '.') {
@@ -337,7 +337,7 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // A 1-9 int was encountered, now we can accept 0-9 or a . to begin a floating point number
                 case 13: {
                     if (c >= '0' && c <= '9') {
@@ -358,7 +358,7 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // A . was encountered, now we can accept 0-9 to begin a floating point number, in other case it is an error
                 case 14: {
                     if (c >= '0' && c <= '9') {
@@ -372,7 +372,7 @@ Lexer::Lexer(std::string inputFile) {
 
                     currentIntFloat = "";
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // Accept [0-9]
                 case 15: {
                     if (c >= '0' && c <= '9') {
@@ -389,7 +389,7 @@ Lexer::Lexer(std::string inputFile) {
                         break;
                     }
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // A '"' (double quote) was encountered, marking the start of a string literal
                 case 16: {
                     if (c != '"' && c != '\\') {
@@ -410,7 +410,7 @@ Lexer::Lexer(std::string inputFile) {
                     }
                     break;
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 // A backslash was encountered in the string. This could potentially be an escape character
                 case 17: {
                     if (c == 't') {
@@ -442,7 +442,7 @@ Lexer::Lexer(std::string inputFile) {
                         throw LexicalException(ln, linePointer, line, "Invalid string!");
                     }
                 }
-                ///////////////////////////////////////////////////////////////////////////////////////
+                /*******************************************************/
                 default:
                 break;
             }
@@ -462,7 +462,8 @@ void Lexer::initializeReservedKeywords() {
         "else",
         "true",
         "false",
-        "return"
+        "return",
+        "print"
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);

@@ -28,6 +28,11 @@ int main(int argc, char **argv) {
         std::cout << "Lexical error on line " << e.getLineNumber() << std::endl << std::endl;
         std::cout << "\033[1;32m"  << e.getLineNumber() << " \033[0m" << e.getLine();
         std::cout << "  ";
+        int lineNumber = e.getLineNumber();
+        while (lineNumber > 9) {
+            lineNumber /= 10;
+            std::cout << " ";
+        }
         for (int i = 0; i < e.getLinePointer(); i++) {
             std::cout << " ";
         }
