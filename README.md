@@ -4,7 +4,7 @@ The group members include:
 1. Aryan Chaubal (2019A7PS0130H)
 2. Samarth Kumar Manish Kumar Jain (2019A7PS0179H)
 3. Prathamesh Jadhav (2019A7PS0084H)
-****
+
 ## Running
 Create an executable by running:
 ```
@@ -27,7 +27,7 @@ chmod +x run_testcases.sh
 ```
 
 The output for these testcases will be stored in the `testcases/output` directory.
-****
+
 ## DFA
 The lexer is implemented using a deterministic finite automata.
 The following notations are used to show the states and operations to be performed:
