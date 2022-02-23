@@ -367,9 +367,11 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         currentIntFloat += c;
                         break;
+                    }else{
+                         // error
+                          throw LexicalException(ln, linePointer, line, "Invalid Character : " + c);
                     }
-                    // error
-
+                    
                     currentIntFloat = "";
                 }
                 /*******************************************************/
