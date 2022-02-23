@@ -10,6 +10,10 @@ Create an executable by running:
 ```
 make
 ```
+or
+```
+./run.sh
+```
 This will create an executable `lexer`, run it:
 ```
 ./lexer <input file>
@@ -40,7 +44,11 @@ The DFA has been divided for different token types to simplify the diagrams.
 
 ### Operators
 ![](assets/operators.png)
-## Comments
+### Comments
 ![](assets/comments.png)
-## Delimiters
+### Delimiters
 ![](assets/delimiters.png)
+### Integers and Floating Point numbers
+![](assets/int%20and%20float.png)
+### Strings
+![](assets/string.png)
