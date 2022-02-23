@@ -52,3 +52,5 @@ The DFA has been divided for different token types to simplify the diagrams.
 ![](assets/int%20and%20float.png)
 ### Strings
 ![](assets/string.png)
+
+Please note that in case some transitions are not added, they will automatically go to the error state.
