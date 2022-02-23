@@ -20,7 +20,7 @@ Token 105    Line 4     identifier     x
 Token 112    Line 4     operator/sign  +
 Token 109    Line 4     identifier     y
 Token 108    Line 4     delimiter      ;
-Token 12     Line 5     keyword        print
+Token 24     Line 5     keyword        print
 Token 102    Line 5     delimiter      (
 Token 111    Line 5     identifier     z
 Token 103    Line 5     delimiter      )

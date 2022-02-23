@@ -32,7 +32,7 @@ Token 105    Line 6     identifier     operation
 Token 114    Line 6     operator       ==
 Token 115    Line 6     int            0
 Token 104    Line 6     delimiter      {
-Token 12     Line 7     keyword        print
+Token 24     Line 7     keyword        print
 Token 102    Line 7     delimiter      (
 Token 110    Line 7     identifier     first
 Token 116    Line 7     operator/sign  +
@@ -46,7 +46,7 @@ Token 105    Line 8     identifier     operation
 Token 114    Line 8     operator       ==
 Token 118    Line 8     int            1
 Token 104    Line 8     delimiter      {
-Token 12     Line 9     keyword        print
+Token 24     Line 9     keyword        print
 Token 102    Line 9     delimiter      (
 Token 110    Line 9     identifier     first
 Token 119    Line 9     operator/sign  -
@@ -60,7 +60,7 @@ Token 105    Line 10    identifier     operation
 Token 114    Line 10    operator       ==
 Token 120    Line 10    int            2
 Token 104    Line 10    delimiter      {
-Token 12     Line 11    keyword        print
+Token 24     Line 11    keyword        print
 Token 102    Line 11    delimiter      (
 Token 110    Line 11    identifier     first
 Token 121    Line 11    operator       *
@@ -70,7 +70,7 @@ Token 109    Line 11    delimiter      ;
 Token 117    Line 12    delimiter      }
 Token 8      Line 12    keyword        else
 Token 104    Line 12    delimiter      {
-Token 12     Line 13    keyword        print
+Token 24     Line 13    keyword        print
 Token 102    Line 13    delimiter      (
 Token 110    Line 13    identifier     first
 Token 122    Line 13    operator       /

@@ -3,7 +3,7 @@ Token 101    Line 2     identifier     main
 Token 102    Line 2     delimiter      (
 Token 103    Line 2     delimiter      )
 Token 104    Line 2     delimiter      {
-Token 12     Line 3     keyword        print
+Token 24     Line 3     keyword        print
 Token 102    Line 3     delimiter      (
 Token 105    Line 3     string         "Hello world"
 Token 103    Line 3     delimiter      )

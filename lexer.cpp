@@ -478,7 +478,8 @@ void Lexer::initializeReservedKeywords() {
         "break",
         "continue",
         "public",
-        "private"
+        "private",
+        "print"
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
