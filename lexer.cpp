@@ -450,6 +450,8 @@ Lexer::Lexer(std::string inputFile) {
     }
 }
 
+
+//List of reserved keywords
 void Lexer::initializeReservedKeywords() {
     std::string reserved[] = {
         "int",
@@ -463,7 +465,18 @@ void Lexer::initializeReservedKeywords() {
         "true",
         "false",
         "return",
-        "print"
+        "auto",
+        "do",
+        "static",
+        "switch",
+        "goto",
+        "for",
+        "try",
+        "throw",
+        "break",
+        "continue",
+        "public",
+        "private"
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
@@ -475,25 +488,33 @@ void Lexer::initializeReservedKeywords() {
 std::string Lexer::findWord(std::string input, int *linePointer) {
     std::string word = "";
     char firstChar = input[*linePointer];
+
+    // increment line pointer untill we scan the entire input string
+
     while (*linePointer < input.length()) {
         char c = input[*linePointer];
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_' || ((c >= '0' && c <= '9') && firstChar != c)) {
             word += c;
             (*linePointer)++;
         } else {
+            // unknown or mallicious input character 
             break;
         }
     }
     return word;
 }
-
+// store(push)) token in vector tokens 
 void Lexer::addToken(std::string token, int line, std::string type) {
+
     // Checking if current token has an entry in symbol table. If not, creating new entry.
     if (symbolTable.find(token) == symbolTable.end()) symbolTable[token] = newSymbolID++;
     Token t = Token(token, line, type, symbolTable[token]);
+    Token t = Token(token, line, type, 1);    //Token is user defined data type
+
     tokens.push_back(t);
 }
 
+// get stored Tokens from vector tokens
 Token* Lexer::getNextToken() {
     if (tokenPointer < tokens.size()) {
         return &tokens[tokenPointer++];
