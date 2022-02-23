@@ -13,9 +13,9 @@ int main(int argc, char **argv) {
     try {
         Lexer lex = Lexer(fileName);
         while (true) {
-            Token *token = lex.getNextToken();
-            if (token == NULL) {
-                break;
+            Token *token = lex.getNextToken();   //fetch stored tokens from vector tokens
+            if (token == NULL) {       // NULL will be returned if request exceeded the stored tokens
+                break;                 // to break the while loop
             }
             std::cout << token->lineNumber << "\t" << token->tokenString << "\t" << token->type << std::endl;
         }
