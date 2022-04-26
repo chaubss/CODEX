@@ -1,8 +1,14 @@
-lexer : main.o lexer.o token.o exceptions.o
-	g++ main.o lexer.o token.o exceptions.o -o lexer 
+parser : main.o parser.o ptable_reader.o lexer.o token.o exceptions.o
+	g++ main.o parser.o ptable_reader.o lexer.o token.o exceptions.o -o parser 
 
-main.o : main.cpp lexer.h token.h exceptions.h
+main.o : main.cpp parser.h ptable_reader.h lexer.h token.h exceptions.h
 	g++ -c main.cpp
+
+parser.o: parser.cpp parser.h
+	g++ -c parser.cpp
+
+parsing_table_reader: ptable_reader.cpp ptable_reader.h
+	g++ -c ptable_reader.cpp
 
 lexer.o : lexer.cpp lexer.h
 	g++ -c lexer.cpp

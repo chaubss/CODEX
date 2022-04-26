@@ -460,6 +460,7 @@ void Lexer::initializeReservedKeywords() {
         "float",
         "boolean",
         "string",
+        "void",
         "while",
         "until",
         "if",
@@ -478,8 +479,7 @@ void Lexer::initializeReservedKeywords() {
         "break",
         "continue",
         "public",
-        "private",
-        "print"
+        "private"
     };
     for (const std::string str: reserved) {
         reservedKeywords.insert(str);
