@@ -3,6 +3,7 @@ STMTS -> STMT STMTS
 STMTS -> ''
 STMT -> FUNC
 STMT -> IF
+STMT -> FOR
 STMT -> WHILE
 STMT -> RETURN ;
 STMT -> ASSIGN ;
@@ -19,7 +20,9 @@ ARGS -> ARG
 ARG -> TYPE ID
 ARG -> ''
 IF -> if ( EXPR ) { STMTS } else { STMTS }
+IF -> if ( EXPR ) { STMTS } else IF
 IF -> if ( EXPR ) { STMTS }
+FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
 WHILE -> while ( EXPR ) { STMTS }
 RETURN -> return EXPR
 ASSIGN -> ID = EXPR

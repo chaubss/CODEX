@@ -3,12 +3,12 @@ Token 101    Line 2     identifier     main
 Token 102    Line 2     delimiter      (
 Token 103    Line 2     delimiter      )
 Token 104    Line 2     delimiter      {
-Token 24     Line 3     keyword        print
+Token 105    Line 3     identifier     print
 Token 102    Line 3     delimiter      (
-Token 105    Line 3     string         "Hello world"
+Token 106    Line 3     string         "Hello world"
 Token 103    Line 3     delimiter      )
-Token 106    Line 3     delimiter      ;
-Token 11     Line 4     keyword        return
-Token 107    Line 4     int            0
-Token 106    Line 4     delimiter      ;
-Token 108    Line 5     delimiter      }
+Token 107    Line 3     delimiter      ;
+Token 12     Line 4     keyword        return
+Token 108    Line 4     int            0
+Token 107    Line 4     delimiter      ;
+Token 109    Line 5     delimiter      }
