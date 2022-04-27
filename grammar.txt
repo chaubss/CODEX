@@ -34,6 +34,9 @@ TERM2 -> TERM2 OP1 TERM3
 TERM2 -> TERM3
 TERM3 -> ( EXPR )
 TERM3 -> ID
+TERM3 -> NUM
+TERM3 -> STR
+TERM -> FLT
 TERM3 -> FUNC_CALL
 FUNC_CALL -> ID ( FUNC_ARGS )
 FUNC_ARGS -> FUNC_ARG , FUNC_ARGS
@@ -57,3 +60,10 @@ OP3 -> <
 OP3 -> >=
 OP3 -> <=
 ID -> <id>
+NUM -> <num>
+NUM -> + <num>
+NUM -> - <num>
+STR -> <str>
+FLT -> <flt>
+FLT -> + <flt>
+FLT -> - <flt>
