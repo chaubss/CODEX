@@ -12,24 +12,36 @@ void printStack(std::vector<std::string> &s, std::string move){
     std::cout<<std::endl<<move<<std::endl;
 }
 
+std::string resolveTokenValue(Token t){
+    if (t.type == "identifier") {
+            return "<id>";
+        } else if (t.type == "int") {
+            return "<num>";
+        } else if (t.type == "float") {
+            return "<flt>";
+        } else if (t.type == "string") {
+            return "<str>";
+        }
+        return t.tokenString;
+}
+
+void printErrors(std::vector<std::vector<std::string>> &errorList){
+    for(int i=0;i<errorList.size();i++){
+        std::cout << "Error at line " << errorList[i][1] << ", token: " << errorList[i][2] << " of type: " << errorList[i][3] << " resolved to token: " << errorList[i][4] << std::endl;
+    }
+}
+
 Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
 // std::string tokenString, int lineNumber, std::string type, int tokenId
     tokens.push_back(Token("$", -1, "EOF", -1));
     int tokenPointer = 0;
     std::vector<std::string> stack;
+    std::vector<std::vector<std::string>> errorList;
     stack.push_back("0");
     while (tokenPointer < tokens.size()) {
         Token token = tokens[tokenPointer];
-        std::string tokVal = token.tokenString;
-        if (token.type == "identifier") {
-            tokVal = "<id>";
-        } else if (token.type == "int") {
-            tokVal = "<num>";
-        } else if (token.type == "float") {
-            tokVal = "<flt>";
-        } else if (token.type == "string") {
-            tokVal = "<str>";
-        }
+        std::string tokVal = resolveTokenValue(token);
+        
         auto temp = ptable->actionTable.find(make_pair(stack.back(), tokVal));
         if (temp != ptable->actionTable.end()) {
             std::string action = temp->second;
@@ -41,7 +53,10 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
             //     // TODO: error handling
             // }
             if (action == "acc") {
-                std::cout << "Accepted." << std::endl;
+                std::cout << "Parsing Successful with ";
+                errorList.size() == 0 ? std::cout<<"no" : std::cout<<"some";
+                std::cout<<" errors."<<std::endl;
+                printErrors(errorList);
                 return;
             }
             if (action[0] == 's') {
@@ -78,7 +93,34 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
             std::cout << "Line: " << token.lineNumber << std::endl;
             std::cout << "Token Type: " << token.type << " " << tokVal << std::endl;
             std::cout << "State: " << stack.back() << std::endl;
-            return;
+            errorList.push_back({stack.back(), std::to_string(token.lineNumber), token.tokenString, token.type, tokVal});
+            std::vector<std::string> safeSymbols = {";", "}", "$"};
+            int safeSymbolFound = 0;
+            std::cout<<"PANIC MODE!\n";
+            for(int i = 0; i < safeSymbols.size(); i++) {
+                if(tokVal == safeSymbols[i]){
+                    tokenPointer++;
+                    break;
+                }
+            }
+            while(tokenPointer < tokens.size()) {
+                Token tempToken = tokens[tokenPointer];
+                std::string tempTokVal = resolveTokenValue(tempToken);
+                for(int i = 0; i < safeSymbols.size(); i++){
+                    if(tempTokVal == safeSymbols[i]){
+                        tokenPointer++;
+                        safeSymbolFound = 1;
+                        break;
+                    }
+                }
+                if(safeSymbolFound == 1)
+                    break;
+                tokenPointer++;                
+            }
+            // stack.pop_back();
+            // stack.pop_back();
+
+            // return;
         }
         
     }
