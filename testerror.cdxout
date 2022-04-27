@@ -1,0 +1,329 @@
+Stack: 0 
+s15
+Stack: 0 int 15 
+r39
+Stack: 0 TYPE 
+goto 10
+Stack: 0 TYPE 10 
+s21
+Stack: 0 TYPE 10 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 
+goto 27
+Stack: 0 TYPE 10 ID 27 
+s41
+Stack: 0 TYPE 10 ID 27 ( 41 
+s15
+Stack: 0 TYPE 10 ID 27 ( 41 int 15 
+r39
+Stack: 0 TYPE 10 ID 27 ( 41 TYPE 
+goto 66
+Stack: 0 TYPE 10 ID 27 ( 41 TYPE 66 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 TYPE 66 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 TYPE 66 ID 
+goto 80
+Stack: 0 TYPE 10 ID 27 ( 41 TYPE 66 ID 80 
+r18
+Stack: 0 TYPE 10 ID 27 ( 41 ARG 
+goto 65
+Stack: 0 TYPE 10 ID 27 ( 41 ARG 65 
+r17
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 
+goto 64
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 
+s78
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 
+s84
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 
+s11
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 
+s30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM2 34 
+r28
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM 
+goto 33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 TERM 33 
+r26
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 
+goto 44
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 
+s52
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 <= 52 
+r54
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 
+goto 46
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM2 34 
+r28
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM 
+goto 72
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 OP3 46 TERM 72 
+r25
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 
+goto 44
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 
+s70
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 
+s81
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 
+s13
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM2 34 
+r28
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM 
+goto 33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 TERM 33 
+r26
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 EXPR 
+goto 32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 return 13 EXPR 32 
+r23
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 RETURN 
+goto 6
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 RETURN 6 
+s23
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 RETURN 6 ; 23 
+r6
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMT 
+goto 2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMT 2 
+r2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMT 2 STMTS 
+goto 22
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMT 2 STMTS 22 
+r1
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 
+goto 86
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 
+s89
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 
+s92
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 
+s93
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 
+s13
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 
+s57
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 * 57 
+r45
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 
+goto 56
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 
+s40
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM2 34 
+r28
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 
+goto 33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 
+s55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 - 55 
+r48
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 
+goto 53
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 
+s21
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 <id> 21 
+r55
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 ID 
+goto 37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 ID 37 
+r32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 TERM3 
+goto 35
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 TERM3 35 
+r30
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 TERM2 
+goto 73
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 OP2 53 TERM2 73 
+r27
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 
+goto 33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 TERM 33 
+r26
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 EXPR 
+goto 63
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 EXPR 63 
+r37
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 FUNC_ARG 
+goto 62
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 FUNC_ARG 62 
+r36
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 FUNC_ARGS 
+goto 61
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 FUNC_ARGS 61 
+s76
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 ID 37 ( 40 FUNC_ARGS 61 ) 76 
+r34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 FUNC_CALL 
+goto 38
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 FUNC_CALL 38 
+r33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 TERM3 
+goto 74
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 OP1 56 TERM3 74 
+r29
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 
+goto 34
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM2 34 
+r28
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM 
+goto 33
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 TERM 33 
+r26
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 EXPR 
+goto 32
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 return 13 EXPR 32 
+r23
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 RETURN 
+goto 6
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 RETURN 6 
+s23
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 RETURN 6 ; 23 
+r6
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMT 
+goto 2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMT 2 
+r2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMT 2 STMTS 
+goto 22
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMT 2 STMTS 22 
+r1
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMTS 
+goto 94
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMTS 94 
+s95
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 if 11 ( 30 EXPR 44 ) 70 { 81 STMTS 86 } 89 else 92 { 93 STMTS 94 } 95 
+r20
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 IF 
+goto 4
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 IF 4 
+r4
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMT 
+goto 2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMT 2 
+r2
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMT 2 STMTS 
+goto 22
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMT 2 STMTS 22 
+r1
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMTS 
+goto 88
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMTS 88 
+s91
+Stack: 0 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 STMTS 88 } 91 
+r15
+Stack: 0 FUNC 
+goto 3
+Stack: 0 FUNC 3 
+r3
+Stack: 0 STMT 
+goto 2
+Stack: 0 STMT 2 
+s20
+Stack: 0 STMT 2 void 20 
+r44
+Stack: 0 STMT 2 TYPE 
+goto 10
+Stack: 0 STMT 2 TYPE 10 
+s21
+Stack: 0 STMT 2 TYPE 10 <id> 21 
+r55
+Stack: 0 STMT 2 TYPE 10 ID 
+goto 27
+Stack: 0 STMT 2 TYPE 10 ID 27 
+s41
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 
+r19
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARG 
+goto 65
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARG 65 
+r17
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARGS 
+goto 64
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARGS 64 
+s78
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 
+s84
+Stack: 0 STMT 2 TYPE 10 ID 27 ( 41 ARGS 64 ) 78 { 84 
+s15
+Error.
+Token: ;
+Line: 11
+Token Type: delimiter
+State: 15

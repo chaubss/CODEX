@@ -21,15 +21,15 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
     while (tokenPointer < tokens.size()) {
         Token token = tokens[tokenPointer];
         std::string tokVal = token.tokenString;
-        if (token.type == "identifier") {
-            tokVal = "<id>";
-        } else if (token.type == "int") {
-            tokVal = "<num>";
-        } else if (token.type == "float") {
-            tokVal = "<flt>";
-        } else if (token.type == "string") {
-            tokVal = "<str>";
-        }
+        if (token.type == "identifier"||token.type == "int"||token.type == "float"||token.type == "string") {
+            tokVal = "<id>";}
+        // } else if (token.type == "int") {
+        //     tokVal = "<num>";
+        // } else if (token.type == "float") {
+        //     tokVal = "<flt>";
+        // } else if (token.type == "string") {
+        //     tokVal = "<str>";
+        // }
         auto temp = ptable->actionTable.find(make_pair(stack.back(), tokVal));
         if (temp != ptable->actionTable.end()) {
             std::string action = temp->second;
@@ -71,8 +71,11 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
                 // std::cout << "Pushing " << toPush << std::endl;
             }
         } else {
+
+            // handle error
             std::cout << "Error." << std::endl;
             std::cout << "Token: " << token.tokenString << std::endl;
+            std::cout << "Line: " << token.lineNumber << std::endl;
             std::cout << "Token Type: " << token.type << std::endl;
             std::cout << "State: " << stack.back() << std::endl;
             return;
