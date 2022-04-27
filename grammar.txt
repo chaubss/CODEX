@@ -26,11 +26,18 @@ FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
 WHILE -> while ( EXPR ) { STMTS }
 RETURN -> return EXPR
 ASSIGN -> ID = EXPR
-EXPR -> EXPR OP3 TERM
+EXPR -> EXPR == TERM
+EXPR -> EXPR != TERM
+EXPR -> EXPR > TERM
+EXPR -> EXPR < TERM
+EXPR -> EXPR >= TERM
+EXPR -> EXPR <= TERM
 EXPR -> TERM
-TERM -> TERM OP2 TERM2
+TERM -> TERM + TERM2
+TERM -> TERM - TERM2
 TERM -> TERM2
-TERM2 -> TERM2 OP1 TERM3
+TERM2 -> TERM2 * TERM3
+TERM2 -> TERM2 / TERM3
 TERM2 -> TERM3
 TERM3 -> ( EXPR )
 TERM3 -> ID
@@ -49,16 +56,6 @@ TYPE -> char
 TYPE -> double
 TYPE -> string
 TYPE -> void
-OP1 -> *
-OP1 -> /
-OP2 -> +
-OP2 -> -
-OP3 -> ==
-OP3 -> !=
-OP3 -> >
-OP3 -> <    
-OP3 -> >=
-OP3 -> <=
 ID -> <id>
 NUM -> <num>
 NUM -> + <num>

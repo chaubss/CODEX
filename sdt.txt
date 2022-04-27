@@ -1,0 +1,27 @@
+ASSIGN -> ID = EXPR { ID.value = EXPR.value }
+EXPR -> EXPR == TERM { EXPR.value = EXPR.value == TERM.value }
+EXPR -> EXPR != TERM { EXPR.value = EXPR.value != TERM.value }
+EXPR -> EXPR > TERM { EXPR.value = EXPR.value > TERM.value }
+EXPR -> EXPR < TERM { EXPR.value = EXPR.value < TERM.value }
+EXPR -> EXPR >= TERM { EXPR.value = EXPR.value >= TERM.value }
+EXPR -> EXPR <= TERM { EXPR.value = EXPR.value <= TERM.value }
+EXPR -> TERM { EXPR.value = TERM.value }
+TERM -> TERM + TERM2 { TERM.value = TERM.value + TERM2.value }
+TERM -> TERM - TERM2 { TERM.value = TERM.value - TERM2.value }
+TERM -> TERM2 { TERM.value = TERM2.value }
+TERM2 -> TERM2 * TERM3 { TERM2.value = TERM2.value * TERM3.value }
+TERM2 -> TERM2 / TERM3 { TERM2.value = TERM2.value / TERM3.value }
+TERM2 -> TERM3 { TERM2.value = TERM3.value }
+TERM3 -> ( EXPR ) { TERM3.value = EXPR.value }
+TERM3 -> ID { TERM3.value = ID.value }
+TERM3 -> NUM { TERM3.value = NUM.value }
+TERM3 -> STR { TERM3.value = STR.value }
+TERM -> FLT { TERM.value = FLT.value }
+ID -> <id> { ID.value = lookup-val(<id>) }
+NUM -> <num> { NUM.value = lookup-val(<num>) }
+NUM -> + <num> { NUM.value = lookup-val(<num>) }
+NUM -> - <num> { NUM.value = -1 * lookup-val(<num>) }
+STR -> <str> { NUM.value = lookup-val(<str>) }
+FLT -> <flt> { NUM.value = lookup-val(<flt>) }
+FLT -> + <flt> { NUM.value = lookup-val(<flt>) }
+FLT -> - <flt> { NUM.value = -1 * lookup-val(<flt>) }
