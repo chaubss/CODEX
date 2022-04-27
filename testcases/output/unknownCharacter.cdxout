@@ -1,0 +1,5 @@
+[1;31mLexicalException[0m  Lexical error on line 2
+
+[1;32m2 [0mprint~("Hello world");
+       [1;31m^[0m
+[1;36mMessage: [0mInvalid Character: ~

@@ -1,0 +1,59 @@
+PROGRAM -> STMTS
+STMTS -> STMT STMTS
+STMTS -> ''
+STMT -> FUNC
+STMT -> IF
+STMT -> FOR
+STMT -> WHILE
+STMT -> RETURN ;
+STMT -> ASSIGN ;
+STMT -> DEFN ;
+STMT -> FUNC_CALL ;
+DEFN -> TYPE DEFN_LIST
+DEFN_LIST -> ID_MAYBE_INIT , DEFN_LIST
+DEFN_LIST -> ID_MAYBE_INIT
+ID_MAYBE_INIT -> ID
+ID_MAYBE_INIT -> ID = EXPR
+FUNC -> TYPE ID ( ARGS ) { STMTS }
+ARGS -> ARG , ARGS
+ARGS -> ARG
+ARG -> TYPE ID
+ARG -> ''
+IF -> if ( EXPR ) { STMTS } else { STMTS }
+IF -> if ( EXPR ) { STMTS } else IF
+IF -> if ( EXPR ) { STMTS }
+FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
+WHILE -> while ( EXPR ) { STMTS }
+RETURN -> return EXPR
+ASSIGN -> ID = EXPR
+EXPR -> EXPR OP3 TERM
+EXPR -> TERM
+TERM -> TERM OP2 TERM2
+TERM -> TERM2
+TERM2 -> TERM2 OP1 TERM3
+TERM2 -> TERM3
+TERM3 -> ( EXPR )
+TERM3 -> ID
+TERM3 -> FUNC_CALL
+FUNC_CALL -> ID ( FUNC_ARGS )
+FUNC_ARGS -> FUNC_ARG , FUNC_ARGS
+FUNC_ARGS -> FUNC_ARG
+FUNC_ARG -> EXPR
+FUNC_ARG -> ''
+TYPE -> int
+TYPE -> float
+TYPE -> char
+TYPE -> double
+TYPE -> string
+TYPE -> void
+OP1 -> *
+OP1 -> /
+OP2 -> +
+OP2 -> -
+OP3 -> ==
+OP3 -> !=
+OP3 -> >
+OP3 -> <    
+OP3 -> >=
+OP3 -> <=
+ID -> <id>

@@ -1,6 +1,4 @@
 #include "lexer.h"
-#include "parser.h"
-#include "ptable_reader.h"
 #include "exceptions.h"
 #include <iostream>
 #include <string>
@@ -9,11 +7,10 @@
 int main(int argc, char **argv) {
 
     if (argc != 2) {
-        std::cout << "Usage: ./parser <input file>" << std::endl;
+        std::cout << "Usage: ./lexer <input file>" << std::endl;
         return 1;
     }
     std::string fileName = argv[1];
-    std::vector<Token> tokens;
     try {
         Lexer lex = Lexer(fileName);
         while (true) {
@@ -21,14 +18,8 @@ int main(int argc, char **argv) {
             if (token == NULL) {       // NULL will be returned if request exceeded the stored tokens
                 break;                 // to break the while loop
             }
-            // std::cout << std::left << "Token " << std::setw(7) << token->tokenId << "Line " << std::setw(6) << token->lineNumber << std::setw(15) << token->type << token->tokenString << std::endl << std::right;
-            // std::cout << token->tokenString << " ";
-            tokens.push_back(*token);
+            std::cout << std::left << "Token " << std::setw(7) << token->tokenId << "Line " << std::setw(6) << token->lineNumber << std::setw(15) << token->type << token->tokenString << std::endl << std::right;
         }
-
-
-        ParsingTableReader *ptable = new ParsingTableReader("actions.csv", "goto.csv");
-        Parser parser = Parser(tokens, ptable);
 
     } catch (FileNotFoundException e) {
         std::cout << "\033[1;31mFileNotFoundException\033[0m  ";

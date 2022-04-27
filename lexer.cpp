@@ -367,9 +367,11 @@ Lexer::Lexer(std::string inputFile) {
                         linePointer++;
                         currentIntFloat += c;
                         break;
+                    }else {
+                        // error
+                        throw LexicalException(ln, linePointer, line, "Unexpected Character: " + std::string(1, c));
                     }
-                    // error
-
+                    
                     currentIntFloat = "";
                 }
                 /*******************************************************/
@@ -458,6 +460,7 @@ void Lexer::initializeReservedKeywords() {
         "float",
         "boolean",
         "string",
+        "void",
         "while",
         "until",
         "if",
@@ -508,8 +511,7 @@ void Lexer::addToken(std::string token, int line, std::string type) {
 
     // Checking if current token has an entry in symbol table. If not, creating new entry.
     if (symbolTable.find(token) == symbolTable.end()) symbolTable[token] = newSymbolID++;
-    Token t = Token(token, line, type, symbolTable[token]);
-
+    Token t = Token(token, line, type, symbolTable[token]); // Token is user defined data type
     tokens.push_back(t);
 }
 

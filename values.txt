@@ -1,0 +1,1 @@
+int <id> ( ) { int <id> = <id> ( <id> ) ; int <id> = <id> ( <id> ) ; int <id> = <id> ( <id> ) ; if ( <id> == <id> ) { <id> ( <id> + <id> ) ; } else if ( <id> == <id> ) { <id> ( <id> - <id> ) ; } else if ( <id> == <id> ) { <id> ( <id> * <id> ) ; } else { <id> ( <id> / <id> ) ; } return <id> ; }

@@ -20,12 +20,12 @@ Token 105    Line 4     identifier     x
 Token 112    Line 4     operator/sign  +
 Token 109    Line 4     identifier     y
 Token 108    Line 4     delimiter      ;
-Token 12     Line 5     keyword        print
+Token 113    Line 5     identifier     write
 Token 102    Line 5     delimiter      (
 Token 111    Line 5     identifier     z
 Token 103    Line 5     delimiter      )
 Token 108    Line 5     delimiter      ;
-Token 11     Line 6     keyword        return
-Token 113    Line 6     int            0
+Token 12     Line 6     keyword        return
+Token 114    Line 6     int            0
 Token 108    Line 6     delimiter      ;
-Token 114    Line 7     delimiter      }
+Token 115    Line 7     delimiter      }

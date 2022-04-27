@@ -1,0 +1,29 @@
+A cfg for the c programming language is:
+
+Program -> Statements
+Statement -> Statement Statements
+Statement -> Declaration
+Statement -> Expression
+Statement -> Return
+Statement -> If
+Statement -> While
+Statement -> Print
+Statement -> Read
+Statement -> Assign
+Statement -> Function
+Statement -> FunctionCall
+Statement -> Return
+Statement -> Break
+Statement -> Continue
+Statement -> Block
+Statement -> Empty
+Declaration -> Type Identifier ;
+Declaration -> Type Identifier = Expression ;
+Assign -> Identifier = Expression ;
+Return -> return Expression ;
+Return -> return ;
+If -> if ( Expression ) Statement
+If -> if ( Expression ) Statement else Statement
+While -> while ( Expression ) Statement
+Print -> print ( Expression ) ;
+Read -> read ( Identifier ) ;
