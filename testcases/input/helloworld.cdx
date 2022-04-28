@@ -1,5 +1,5 @@
 // A Hello World Program
 int main() { 
-    print("Hello world");
+    printf("Hello, World!\n");
     return 0;
 }

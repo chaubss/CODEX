@@ -1,7 +1,3 @@
-if (a == b) {
-    c = 1;
-}
-test = "dkfasfmklsdfs";
-if (a == (b + c - d)) {
-    a = 10;
+void test() {
+    int a = 4;
 }
