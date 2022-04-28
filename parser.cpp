@@ -38,15 +38,32 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
         case 4:
         toPush = false;
         break;
-        case 8:
-        toPush = false;
-        break;
+        case 8: {
+            stack.pop_back();
+            SemanticObject ass = stack.back();
+            stack.pop_back();
+            so.code = ass.code;
+            so.temp = ass.temp;
+            break;
+        }
         case 9:
-        toPush = false;
-        break;
+        {
+            stack.pop_back();
+            SemanticObject defn = stack.back();
+            stack.pop_back();
+            so.code = defn.code;
+            so.temp = defn.temp;
+            break;
+        }
         case 10:
-        toPush = false;
-        break;
+        {
+            stack.pop_back();
+            SemanticObject fcall = stack.back();
+            stack.pop_back();
+            so.code = fcall.code;
+            so.temp = fcall.temp;
+            break;
+        }
         case 11: {
             SemanticObject defnList = stack.back();
             stack.pop_back(); stack.pop_back();
@@ -466,11 +483,11 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
         } else {
 
             // handle error
-            std::cout << "Error." << std::endl;
-            std::cout << "Token: " << token.tokenString << std::endl;
-            std::cout << "Line: " << token.lineNumber << std::endl;
-            std::cout << "Token Type: " << token.type << " " << tokVal << std::endl;
-            std::cout << "State: " << stack.back() << std::endl;
+            // std::cout << "Error." << std::endl;
+            // std::cout << "Token: " << token.tokenString << std::endl;
+            // std::cout << "Line: " << token.lineNumber << std::endl;
+            // std::cout << "Token Type: " << token.type << " " << tokVal << std::endl;
+            // std::cout << "State: " << stack.back() << std::endl;
             std::vector<std::string> errorListItem{ stack.back(), std::to_string(token.lineNumber), token.tokenString, token.type, tokVal };
             errorList.push_back(errorListItem);
             std::vector<std::string> safeSymbols {";", "}", "$"};
