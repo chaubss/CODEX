@@ -1,4 +1,4 @@
-PROGRAM -> STMTS { program.code = STMT.code } -------------------
+PROGRAM -> STMTS { program.code = STMTS.code } -------------------
 STMTS -> STMT STMTS { STMTS.code = STMT.code || STMTS.code } -------------
 STMTS -> '' { STMTS.code = '' } ----------------
 STMT -> FUNC

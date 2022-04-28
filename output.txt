@@ -143,8 +143,8 @@ Parsing Successful with no errors.
 
 The intermediate three address code generated is:
 
-t0 := "Hello, World!\n"
 
+t0 := "Hello, World!\n"
 t1 := 0
 
 
