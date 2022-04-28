@@ -7,19 +7,19 @@ STMT -> FOR
 STMT -> WHILE
 STMT -> RETURN 
 STMT -> ASSIGN ; { STMT.code = ASSIGN.code }
-STMT -> DEFN ;
-STMT -> FUNC_CALL ;
-DEFN -> TYPE DEFN_LIST
-DEFN_LIST -> ID_MAYBE_INIT , DEFN_LIST
-DEFN_LIST -> ID_MAYBE_INIT
-ID_MAYBE_INIT -> ID
-ID_MAYBE_INIT -> ID = EXPR
-FUNC -> TYPE ID ( ARGS ) { STMTS }
+STMT -> DEFN ; { STMT.code = DEFN.code  // pop twice } -------------
+STMT -> FUNC_CALL ; { STMT.code = FUNC_CALL.code }
+DEFN -> TYPE DEFN_LIST { DEFN.code = DEFN_LIST.code } ---------------
+DEFN_LIST -> ID_MAYBE_INIT , DEFN_LIST2  { DEFN_LIST.code = ID_MAYBE_INIT.code + '\n' + DEFN_LIST2.code } -----------
+DEFN_LIST -> ID_MAYBE_INIT { DEFN_LIST.temp = ID_MAYBE_INIT.temp, DEFN_LIST.code = ID_MAYBE_INIT.code } ----------
+ID_MAYBE_INIT -> ID { ID_MAYBE_INIT.temp = ID.temp; ID_MAYBE_INIT.code = ID.code } ----------
+ID_MAYBE_INIT -> ID = EXPR  { ID_MAYBE_INIT.code = EXPR.code||ID.temp + ' := ' + EXPR.temp }
+FUNC -> TYPE ID ( ARGS ) { STMTS } { FUNC.code = STMT.code }
 ARGS -> ARG , ARGS
 ARGS -> ARG
 ARG -> TYPE ID
 ARG -> ''
-IF -> if ( EXPR ) { STMTS } else { STMTS }
+IF -> if ( EXPR ) { STMTS1 } else { STMTS2 } { IF.code == EXP.code || "if (" expr.temp ") goto IFL\ngoto elseL\n ifL: Stmts1.code\ngoto skipL\n elseL: statements2.code \n skipL:\n" } -----------------
 IF -> if ( EXPR ) { STMTS } else IF
 IF -> if ( EXPR ) { STMTS } { ifL = genL() skipL = genL() IF.code = EXPR.code || "if (EXPR.temp) goto ifL \n goto skipL \n ifL: STMTS.code \n skipL:" } -----------
 FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
@@ -44,11 +44,11 @@ TERM3 -> ID { TERM3.temp = ID.temp } --------
 TERM3 -> NUM { TERM3.temp = NUM.temp; } --------
 TERM3 -> STR { TERM3.temp = STR.temp } --------
 TERM3 -> FLT { TERM3.temp = FLT.temp }  --------
-TERM3 -> FUNC_CALL
-FUNC_CALL -> ID ( FUNC_ARGS )
-FUNC_ARGS -> FUNC_ARG , FUNC_ARGS
-FUNC_ARGS -> FUNC_ARG
-FUNC_ARG -> EXPR
+TERM3 -> FUNC_CALL { TERM3.code = FUNC_CALL.code }
+FUNC_CALL -> ID ( FUNC_ARGS ) { FUNC_CALL.code = FUNC_ARGS.code }
+FUNC_ARGS -> FUNC_ARG , FUNC_ARGS { FUNC_ARGS.code = FUNC_ARG.code || FUNC_ARGS.code }
+FUNC_ARGS -> FUNC_ARG { FUNC_ARGS.code = FUNC_ARG.code }
+FUNC_ARG -> EXPR { FUNC_ARG.code = EXPR.code }
 FUNC_ARG -> ''
 TYPE -> int
 TYPE -> float

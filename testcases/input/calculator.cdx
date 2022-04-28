@@ -1,16 +1,17 @@
 // A calculator
 int main() {
-    int operation = input("Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /");
-    int first = input("Enter first number: ");
-    int second = input("Enter second number: ");
+
     if (operation == 0) {
         print(first + second);
-    } else if (operation == 1) {
+    } 
+    if (operation == 1) {
         print(first - second);
-    } else if (operation == 2) {
+    }
+    if (operation == 2) {
         print(first * second);
-    } else {
-        print(first / second);
+    }
+    if (operation == 3) {
+        print(first * second);
     }
 
     return 0;
