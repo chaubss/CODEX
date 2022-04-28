@@ -1,0 +1,6 @@
+
+int a = 10;
+int b = 24;
+int c = 242;
+
+int d = a + b * c;

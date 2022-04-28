@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string gotoFileName) {
 
     std::ifstream actionFile(actionFileName);
@@ -16,7 +14,7 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
     if (!gotoFile.is_open()) {
         throw FileNotFoundException(gotoFileName);
     }
-    string line, terminal="";
+    std::string line, terminal="";
     actionFile >> line;
     for(int i = 0; i < line.length(); i++) {
         if(line[i] != ',') {
@@ -36,7 +34,7 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
     if (terminal.length() > 0) {
         terminals.push_back(terminal);
     }
-    string nonTerminal = "";
+    std::string nonTerminal = "";
     gotoFile >> line;
     for(int i = 0; i < line.length(); i++) {
         if(line[i] != ',') {
@@ -71,8 +69,8 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
     // cout << endl;
 
     while (actionFile >> line) {
-        string action = "";
-        vector<string> actions;
+        std::string action = "";
+        std::vector<std::string> actions;
         for(int i = 0; i < line.length(); i++) {
             if(line[i] != ',') {
                 action += line[i];
@@ -83,9 +81,9 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
             }
         }
         actions.push_back(action);
-        string state = actions[0];
+        std::string state = actions[0];
         for (int i = 1; i < actions.size(); i++) {
-            string action = actions[i];
+            std::string action = actions[i];
             if (action.length() == 0) {
                 continue;
             }
@@ -95,9 +93,9 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
     }
 
     while (gotoFile >> line) {
-        string _goto = "";
-        string state = "";
-        vector<string> gotos;
+        std::string _goto = "";
+        std::string state = "";
+        std::vector<std::string> gotos;
         for(int i = 0; i < line.length(); i++) {
             if(line[i] != ',') {
                 _goto += line[i];
@@ -110,7 +108,7 @@ ParsingTableReader::ParsingTableReader(std::string actionFileName, std::string g
         gotos.push_back(_goto);
         state = gotos[0];
         for (int i = 1; i < gotos.size(); i++) {
-            string _gotoInside = gotos[i];
+            std::string _gotoInside = gotos[i];
             if (_gotoInside.length() == 0) {
                 continue;
             }

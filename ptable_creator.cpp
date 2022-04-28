@@ -1,6 +1,5 @@
 #include "ptable_reader.h"
 #include <iostream>
-using namespace std;
 
 int main() {
 
