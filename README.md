@@ -8,17 +8,21 @@ The group members include:
 ## Running
 Create an executable by running:
 ```
-make
+make -f parser.mk
 ```
-or
+This will create an executable `parser`, run it:
 ```
-./run.sh
+./parser <input file>
+```
+To run the lexer:
+```
+make -f lexer.mk
 ```
 This will create an executable `lexer`, run it:
 ```
 ./lexer <input file>
 ```
-### Running the testcases
+### Running the testcases ( For lexer only )
 Several testcases have been provided in the `testcases/input` directory. You can run them all at once by running the `run_testcases.sh` script.
 1. Add your testcases to the `testcases/input` directory.
 2. Give permission to run the shell script:
@@ -54,3 +58,8 @@ The DFA has been divided for different token types to simplify the diagrams.
 ![](assets/string.png)
 
 Please note that in case some transitions are not added, they will automatically go to the error state.
+
+## Grammar and SDD
+You can view the grammar and SDD in `grammar.txt` and `sdd.txt` respectively.
+
+The method to generate the three address code was obtained from [here](http://seclab.cs.sunysb.edu/sekar/cse304/codegen.pdf).
