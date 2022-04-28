@@ -1,4 +1,4 @@
-State,;,",",=,(,),{,},if,else,for,while,return,==,!=,>,<,>=,<=,+,-,*,/,int,float,char,double,string,void,<id>,<num>,<str>,<flt>,$
+﻿State,;,",",=,(,),{,},if,else,for,while,return,==,!=,>,<,>=,<=,+,-,*,/,int,float,char,double,string,void,<id>,<num>,<str>,<flt>,$
 0,,,,,,,,s12,,s13,s14,s15,,,,,,,,,,,s17,s18,s19,s20,s21,s22,s23,,,,r2
 1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,acc
 2,,,,,,,r2,s12,,s13,s14,s15,,,,,,,,,,,s17,s18,s19,s20,s21,s22,s23,,,,r2
