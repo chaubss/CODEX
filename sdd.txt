@@ -1,0 +1,66 @@
+PROGRAM -> STMTS { program.code = STMT.code } -------------------
+STMTS -> STMT STMTS { STMTS.code = STMT.code || STMTS.code } -------------
+STMTS -> '' { STMTS.code = '' } ----------------
+STMT -> FUNC
+STMT -> IF { STMT.code = IF.code }
+STMT -> FOR
+STMT -> WHILE
+STMT -> RETURN 
+STMT -> ASSIGN ; { STMT.code = ASSIGN.code }
+STMT -> DEFN ;
+STMT -> FUNC_CALL ;
+DEFN -> TYPE DEFN_LIST
+DEFN_LIST -> ID_MAYBE_INIT , DEFN_LIST
+DEFN_LIST -> ID_MAYBE_INIT
+ID_MAYBE_INIT -> ID
+ID_MAYBE_INIT -> ID = EXPR
+FUNC -> TYPE ID ( ARGS ) { STMTS }
+ARGS -> ARG , ARGS
+ARGS -> ARG
+ARG -> TYPE ID
+ARG -> ''
+IF -> if ( EXPR ) { STMTS } else { STMTS }
+IF -> if ( EXPR ) { STMTS } else IF
+IF -> if ( EXPR ) { STMTS } { ifL = genL() skipL = genL() IF.code = EXPR.code || "if (EXPR.temp) goto ifL \n goto skipL \n ifL: STMTS.code \n skipL:" } -----------
+FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
+WHILE -> while ( EXPR ) { STMTS }
+RETURN -> return EXPR
+ASSIGN -> ID = EXPR { ASSIGN.code =  EXPR.code || "ID.temp := EXPR.temp" } ------------
+EXPR -> EXPR == TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp == TERM.temp" } --------------
+EXPR -> EXPR != TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp != TERM.temp" } --------------
+EXPR -> EXPR > TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp > TERM.temp" } --------------
+EXPR -> EXPR < TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp < TERM.temp" } --------------
+EXPR -> EXPR >= TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp >= TERM.temp" } --------------
+EXPR -> EXPR <= TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp <= TERM.temp" } --------------
+EXPR -> TERM { EXPR.temp = TERM.temp } ------------
+TERM -> TERM + TERM2 { TERM.temp = newtemp(); TERM.code = "TERM.temp := TERM.temp + TERM2.temp" } --------------
+TERM -> TERM - TERM2 { TERM.temp = newtemp(); TERM.code = "TERM.temp := TERM.temp - TERM2.temp" } ----------
+TERM -> TERM2 { TERM.temp = TERM2.temp } ----------
+TERM2 -> TERM2 * TERM3 { TERM2.temp = newtemp(); TERM2.code = "TERM2.temp := TERM2.temp * TERM3.temp" } --------
+TERM2 -> TERM2 / TERM3 { TERM2.temp = newtemp(); TERM2.code = "TERM2.temp := TERM2.temp / TERM3.temp" }  --------
+TERM2 -> TERM3 { TERM2.temp = TERM3.temp } --------
+TERM3 -> ( EXPR ) { TERM3.temp = EXPR.temp } --------
+TERM3 -> ID { TERM3.temp = ID.temp } --------
+TERM3 -> NUM { TERM3.temp = NUM.temp; } --------
+TERM3 -> STR { TERM3.temp = STR.temp } --------
+TERM3 -> FLT { TERM3.temp = FLT.temp }  --------
+TERM3 -> FUNC_CALL
+FUNC_CALL -> ID ( FUNC_ARGS )
+FUNC_ARGS -> FUNC_ARG , FUNC_ARGS
+FUNC_ARGS -> FUNC_ARG
+FUNC_ARG -> EXPR
+FUNC_ARG -> ''
+TYPE -> int
+TYPE -> float
+TYPE -> char
+TYPE -> double
+TYPE -> string
+TYPE -> void
+ID -> <id> { ID.temp = <id>; ID.code = '' } --------
+NUM -> <num> { NUM.temp = newtemp(); NUM.code = "NUM.temp := <num>" } --------
+NUM -> + <num> { NUM.temp = newtemp(); NUM.code = "NUM.temp := <num>" } --------
+NUM -> - <num> { NUM.temp = newtemp(); NUM.code = "NUM.temp := -<num>" } --------
+STR -> <str> { STR.temp = newtemp(); STR.code = "STR.temp := <str>" } --------
+FLT -> <flt> { FLT.temp = newtemp(); FLT.code = "FLT.temp := <flt>" } --------
+FLT -> + <flt> { FLT.temp = newtemp(); FLT.code = "FLT.temp := <flt>" } --------
+FLT -> - <flt> { FLT.temp = newtemp(); FLT.code = "FLT.temp := -<flt>" } --------

@@ -60,7 +60,7 @@ class ParsingTableReader {
             { "TERM3", "1" },
             { "TERM3", "1" },
             { "TERM3", "1" },
-            { "TERM", "1" },
+            { "TERM3", "1" },
             { "TERM3", "1" },
             { "FUNC_CALL", "4" },
             { "FUNC_ARGS", "3" },

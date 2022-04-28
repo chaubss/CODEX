@@ -1,9 +1,303 @@
 #include "ptable_reader.h"
 #include "token.h"
 #include "parser.h"
+#include "semantic_object.h"
 #include <iostream>
+#include <string>
 #include <stack>
+#include <vector>
 #include <set>
+
+std::string Parser::generateTemporaryToken() {
+    return "t" + std::to_string(temporaryTokenIndex++);
+}
+
+std::string Parser::generateLabelToken() {
+    return "l" + std::to_string(labelTokenIndex++);
+}
+
+void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
+    SemanticObject so;
+    bool toPush = true;
+    switch (ruleNumber) {
+        case 0:
+        std::cout << "asdf" << std::endl;
+        toPush = false;
+        break;
+        case 1: {
+            SemanticObject stmts = stack.back();
+            stack.pop_back();
+            SemanticObject stmt = stack.back();
+            stack.pop_back();
+            
+            so.code = stmt.code + "\n" + stmts.code;
+            break;
+        }
+        case 2:
+        toPush = false;
+        break;
+        case 4:
+        toPush = false;
+        break;
+        case 8:
+        toPush = false;
+        break;
+        case 23: {
+            SemanticObject _ = stack.back();
+            stack.pop_back();
+            SemanticObject stmts = stack.back();
+            stack.pop_back();
+            SemanticObject __ = stack.back();
+            stack.pop_back();
+            SemanticObject ___ = stack.back();
+            stack.pop_back();
+            SemanticObject expr = stack.back();
+            stack.pop_back();
+            SemanticObject ____ = stack.back();
+            stack.pop_back();
+            SemanticObject _____ = stack.back();
+            stack.pop_back();
+            so.temp = "";
+            std::string ifL = generateLabelToken();
+            std::string skipL = generateLabelToken();
+            so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\n" + skipL + ":\n";
+            break;
+        }
+        case 27: {
+            SemanticObject expr = stack.back();
+            stack.pop_back();
+            SemanticObject _ = stack.back();
+            stack.pop_back();
+            SemanticObject id = stack.back();
+            stack.pop_back();
+            so.temp = "";
+            so.code = expr.code + "\n" + id.temp + " := " + expr.temp;
+            std::cout << "******************" << std::endl;
+            std::cout << so.code << std::endl;
+            std::cout << "******************" << std::endl;
+            break;
+        }
+        case 28: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+        case 29: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+         case 30: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+         case 31: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+         case 32: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+         case 33: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+        case 34:
+        toPush = false;
+        break;
+        case 35: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            std::cout << "-----------------------------------------" << std::endl;
+            std::cout << so.code << std::endl;
+            std::cout << "-----------------------------------------" << std::endl;
+            break;
+        }
+        case 36: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+        case 37:
+        toPush = false;
+        break;
+        case 38: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+        case 39: {
+            so.temp = generateTemporaryToken();
+            SemanticObject op2 = stack.back();
+            stack.pop_back();
+            SemanticObject op = stack.back();
+            stack.pop_back();
+            SemanticObject op1 = stack.back();
+            stack.pop_back();
+            so.code = op1.code + "\n" + op2.code + "\n";
+            so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
+            break;
+        }
+        case 40:
+        toPush = false;
+        break;
+        case 41: {
+            SemanticObject _ = stack.back();
+            stack.pop_back();
+            SemanticObject expr = stack.back();
+            stack.pop_back();
+            SemanticObject __ = stack.back();
+            stack.pop_back();
+            so.code = expr.code;
+            so.temp = expr.temp;
+            break;
+        }
+        case 42:
+        toPush = false;
+        break;
+        case 43:
+        toPush = false;
+        break;
+        case 44:
+        toPush = false;
+        break;
+        case 45:
+        toPush = false;
+        break;
+        case 58: {
+            so.temp = stack.back().temp;
+            so.code = "";
+            stack.pop_back();
+            break;
+        }
+        case 59: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := " + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 60: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := " + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 61: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := -" + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 62: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := " + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 63: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := " + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 64: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := " + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        case 65: {
+            so.temp = generateTemporaryToken();
+            so.code = so.temp + " := -" + stack.back().temp;
+            stack.pop_back();
+            break;
+        }
+        default: {
+            so.temp = "";
+            so.code = "";
+            int toRemove = stoi(preader->ruleConstants[ruleNumber][1]);
+            for (int i = 0; i < toRemove; i++) {
+                stack.pop_back();
+            }
+        }
+    }
+    // if (so.code != "" && so.temp != "") {
+    //     stack.push_back(so);
+    //     std::cout << "Pushing " << stack.back().code << std::endl;
+    // }
+    if (toPush) {
+        stack.push_back(so);
+        std::cout << "Pushing " << ((stack.back().code == "") ? "<empty>" : stack.back().code) << " " << ((stack.back().temp == "") ? "<empty>" : stack.back().temp) << std::endl;
+    }
+}
 
 void printStack(std::vector<std::string> &s, std::string move){
     // std::cout<<"Stack: ";
@@ -69,16 +363,15 @@ FLT -> + <flt>
 FLT -> - <flt>
 */
 
-std::string Parser::generateTemporaryToken() {
-    return "t" + std::to_string(temporaryTokenIndex++);
-}
 
 Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
 // std::string tokenString, int lineNumber, std::string type, int tokenId
+    preader = ptable;
     tokens.push_back(Token("$", -1, "EOF", -1));
     int tokenPointer = 0;
     std::vector<std::string> stack;
     std::vector<std::string> expressionStack;
+    std::vector<SemanticObject> semanticStack;
 
     std::vector<std::vector<std::string> > errorList;
     stack.push_back("0");
@@ -101,15 +394,22 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
                 errorList.size() == 0 ? std::cout<<"no" : std::cout<<"some";
                 std::cout<<" errors."<<std::endl;
                 printErrors(errorList);
+                std::cout << semanticStack.back().code << std::endl;
+                std::cout << semanticStack.size() << std::endl;
                 return;
             }
             if (action[0] == 's') {
                 printStack(stack, action);
                 stack.push_back(tokVal);
                 stack.push_back(action.substr(1));
-                if (token.type == "operator" || token.type == "identifier" || token.type == "operator/sign" || token.type == "int" || token.type == "float") {
+                if (token.type == "operator" || token.type == "identifier" || token.type == "operator/sign" || token.type == "int" || token.type == "float" || token.type == "string") {
                     expressionStack.push_back(token.tokenString);
                 }
+                // push into semantic stack
+                SemanticObject sobj;
+                sobj.code = "";
+                sobj.temp = token.tokenString;
+                semanticStack.push_back(sobj);
                 tokenPointer++;
             } else if (action[0] == 'r') {
                 int ruleNum = stoi(action.substr(1));
@@ -134,8 +434,10 @@ Parser::Parser(std::vector<Token> tokens, ParsingTableReader *ptable) {
                     std::string temp = generateTemporaryToken();
                     expressionStack.push_back(temp);
                     std::string threeCodeRule = temp + " = " + firstOperand + " " + operation + " " + secondOperand + ";";
-                    std::cout << threeCodeRule << std::endl;
+                    // std::cout << threeCodeRule << std::endl;
                 }
+                std::cout << "Calling with rule number: " << ruleNum << std::endl;
+                modifyStack(semanticStack, ruleNum);
                 // semantic conditions
                 std::string lastState = stack.back();
                 // std::cout << "Last state: " << lastState << std::endl;
