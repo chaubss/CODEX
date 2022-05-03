@@ -40,6 +40,9 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
         case 4:
         toPush = false;
         break;
+        case 6:
+        toPush = false;
+        break;
         case 8: {
             stack.pop_back();
             SemanticObject ass = stack.back();
@@ -158,6 +161,20 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             std::string ifL = generateLabelToken();
             std::string skipL = generateLabelToken();
             so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\n" + skipL + ":\n";
+            break;
+        }
+        case 25: {
+            stack.pop_back();
+            SemanticObject stmts = stack.back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back();
+            SemanticObject expr = stack.back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back();
+            std::string whileL = generateLabelToken();
+            std::string ifL = generateLabelToken();
+            std::string skipL = generateLabelToken();
+
+            so.temp = "";
+            so.code = whileL + ":\n" + expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\ngoto " + whileL + "\n" + skipL + ":\n";
             break;
         }
         case 27: {

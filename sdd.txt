@@ -4,7 +4,7 @@ STMTS -> '' { STMTS.code = '' } ----------------
 STMT -> FUNC
 STMT -> IF { STMT.code = IF.code }
 STMT -> FOR
-STMT -> WHILE
+STMT -> WHILE { STMT.code = WHILE.code } ------------------------
 STMT -> RETURN 
 STMT -> ASSIGN ; { STMT.code = ASSIGN.code }
 STMT -> DEFN ; { STMT.code = DEFN.code  // pop twice } -------------
@@ -23,7 +23,7 @@ IF -> if ( EXPR ) { STMTS1 } else { STMTS2 } { IF.code == EXP.code || "if (" exp
 IF -> if ( EXPR ) { STMTS } else IF ----------------------------
 IF -> if ( EXPR ) { STMTS } { ifL = genL() skipL = genL() IF.code = EXPR.code || "if (EXPR.temp) goto ifL \n goto skipL \n ifL: STMTS.code \n skipL:" } -----------
 FOR -> for ( DEFN ; EXPR ; ASSIGN ) { STMTS }
-WHILE -> while ( EXPR ) { STMTS }
+WHILE -> while ( EXPR ) { STMTS } -----------
 RETURN -> return EXPR
 ASSIGN -> ID = EXPR { ASSIGN.code =  EXPR.code || "ID.temp := EXPR.temp" } ------------
 EXPR -> EXPR == TERM { EXPR.temp = newtemp(); EXPR.code = "EXPR.temp := EXPR.temp == TERM.temp" } --------------
