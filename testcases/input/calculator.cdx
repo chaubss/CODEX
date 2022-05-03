@@ -3,14 +3,11 @@ int main() {
 
     if (operation == 0) {
         print(first + second);
-    } 
-    if (operation == 1) {
+    } else if (operation == 1) {
         print(first - second);
-    }
-    if (operation == 2) {
+    } else if (operation == 2) {
         print(first * second);
-    }
-    if (operation == 3) {
+    } else if (operation == 3) {
         print(first * second);
     }
 
