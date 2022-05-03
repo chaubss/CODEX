@@ -1,151 +1,64 @@
-Stack: 0 
-s17
-Stack: 0 int 17 
-r52
-Stack: 0 TYPE 
-goto 11
-Stack: 0 TYPE 11 
-s23
-Stack: 0 TYPE 11 <id> 23 
-r58
-Stack: 0 TYPE 11 ID 
-goto 29
-Stack: 0 TYPE 11 ID 29 
-s52
-Stack: 0 TYPE 11 ID 29 ( 52 
-r20
-Stack: 0 TYPE 11 ID 29 ( 52 ARG 
-goto 79
-Stack: 0 TYPE 11 ID 29 ( 52 ARG 79 
-r18
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 
-goto 78
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 
-s100
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 
-s107
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 
-s23
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 <id> 23 
-r58
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 
-goto 16
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 
-s51
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 
-s48
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 <str> 48 
-r62
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 STR 
-goto 42
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 STR 42 
-r44
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM3 
-goto 38
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM3 38 
-r40
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM2 
-goto 37
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM2 37 
-r37
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM 
-goto 36
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 TERM 36 
-r34
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 EXPR 
-goto 77
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 EXPR 77 
-r50
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 FUNC_ARG 
-goto 76
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 FUNC_ARG 76 
-r49
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 FUNC_ARGS 
-goto 75
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 FUNC_ARGS 75 
-s98
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 ID 16 ( 51 FUNC_ARGS 75 ) 98 
-r47
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 FUNC_CALL 
-goto 10
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 FUNC_CALL 10 
-s28
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 FUNC_CALL 10 ; 28 
-r10
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 
-goto 2
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 
-s15
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 
-s45
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 <num> 45 
-r59
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 NUM 
-goto 41
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 NUM 41 
-r43
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM3 
-goto 38
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM3 38 
-r40
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM2 
-goto 37
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM2 37 
-r37
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM 
-goto 36
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 TERM 36 
-r34
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 EXPR 
-goto 35
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 return 15 EXPR 35 
-r26
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 RETURN 
-goto 7
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 RETURN 7 
-s25
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 RETURN 7 ; 25 
-r7
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMT 
-goto 2
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMT 2 
-r2
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMT 2 STMTS 
-goto 24
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMT 2 STMTS 24 
-r1
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMTS 
-goto 24
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMT 2 STMTS 24 
-r1
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMTS 
-goto 112
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMTS 112 
-s117
-Stack: 0 TYPE 11 ID 29 ( 52 ARGS 78 ) 100 { 107 STMTS 112 } 117 
-r16
-Stack: 0 FUNC 
-goto 3
-Stack: 0 FUNC 3 
-r3
-Stack: 0 STMT 
-goto 2
-Stack: 0 STMT 2 
-r2
-Stack: 0 STMT 2 STMTS 
-goto 24
-Stack: 0 STMT 2 STMTS 24 
-r1
-Stack: 0 STMTS 
-goto 1
 Parsing Successful with no errors.
 
 
 The intermediate three address code generated is:
 
+t0 := 0
+t1 := operation == t0
+if (t1) goto l8
+goto l9
+l8:
 
-t0 := "Hello, World!\n"
-t1 := 0
+
+t2 := first + second
+
+goto l10
+l9:
+
+t3 := 1
+t4 := operation == t3
+if (t4) goto l5
+goto l6
+l5:
+
+
+t5 := first - second
+
+goto l7
+l6:
+
+t6 := 2
+t7 := operation == t6
+if (t7) goto l2
+goto l3
+l2:
+
+
+t8 := first * second
+
+goto l4
+l3:
+
+t9 := 3
+t10 := operation == t9
+if (t10) goto l0
+goto l1
+l0:
+
+
+t11 := first * second
+
+l1:
+
+l4:
+
+l7:
+
+l10:
+
+t12 := 0
+
+
 
 
 

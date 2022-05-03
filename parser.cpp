@@ -32,9 +32,11 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             so.code = stmt.code + "\n" + stmts.code;
             break;
         }
-        case 2:
-        toPush = false;
-        break;
+        case 2: {
+            so.code = "";
+            so.temp = "";
+            break;
+        }
         case 4:
         toPush = false;
         break;
@@ -105,7 +107,7 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
         case 16: {
             stack.pop_back();
             so.code = stack.back().code;
-            stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back(); stack.pop_back();
             break;
         }
         case 21: {
@@ -123,6 +125,23 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
 
 
             so.code = expr.code + "\nif(" + expr.temp + ") goto " + ifL + "\ngoto " + elseL + "\n" + ifL + ":\n" + stmt1.code + "\ngoto " + skipL + "\n" + elseL + ":\n" + stmt2.code + "\n" + skipL + ":\n";
+            break;
+        }
+        case 22: {
+            SemanticObject innerIf = stack.back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back();
+            SemanticObject stmts = stack.back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back();
+            SemanticObject expr = stack.back();
+            stack.pop_back(); stack.pop_back(); stack.pop_back();
+            
+            std::string ifL = generateLabelToken();
+            std::string elseL = generateLabelToken();
+            std::string skipL = generateLabelToken();
+            so.temp = "";
+            so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + elseL \
+            + "\n" + ifL + ":\n" + stmts.code + "\ngoto " + skipL + "\n" + \
+            elseL + ":\n" + innerIf.code + "\n" + skipL + ":\n";
             break;
         }
         case 23: {
