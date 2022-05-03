@@ -1,0 +1,439 @@
+Stack: 0 
+s17
+Stack: 0 int 17 
+r52
+Stack: 0 TYPE 
+goto 11
+Stack: 0 TYPE 11 
+s23
+Stack: 0 TYPE 11 <id> 23 
+r58
+Stack: 0 TYPE 11 ID 
+goto 29
+Stack: 0 TYPE 11 ID 29 
+s53
+Stack: 0 TYPE 11 ID 29 = 53 
+s45
+Stack: 0 TYPE 11 ID 29 = 53 <num> 45 
+r59
+Stack: 0 TYPE 11 ID 29 = 53 NUM 
+goto 41
+Stack: 0 TYPE 11 ID 29 = 53 NUM 41 
+r43
+Stack: 0 TYPE 11 ID 29 = 53 TERM3 
+goto 38
+Stack: 0 TYPE 11 ID 29 = 53 TERM3 38 
+r40
+Stack: 0 TYPE 11 ID 29 = 53 TERM2 
+goto 37
+Stack: 0 TYPE 11 ID 29 = 53 TERM2 37 
+r37
+Stack: 0 TYPE 11 ID 29 = 53 TERM 
+goto 36
+Stack: 0 TYPE 11 ID 29 = 53 TERM 36 
+r34
+Stack: 0 TYPE 11 ID 29 = 53 EXPR 
+goto 81
+Stack: 0 TYPE 11 ID 29 = 53 EXPR 81 
+r15
+Stack: 0 TYPE 11 ID_MAYBE_INIT 
+goto 31
+Stack: 0 TYPE 11 ID_MAYBE_INIT 31 
+r13
+Stack: 0 TYPE 11 DEFN_LIST 
+goto 30
+Stack: 0 TYPE 11 DEFN_LIST 30 
+r11
+Stack: 0 DEFN 
+goto 9
+Stack: 0 DEFN 9 
+s27
+Stack: 0 DEFN 9 ; 27 
+r9
+Stack: 0 STMT 
+goto 2
+Stack: 0 STMT 2 
+s12
+Stack: 0 STMT 2 if 12 
+s32
+Stack: 0 STMT 2 if 12 ( 32 
+s23
+Stack: 0 STMT 2 if 12 ( 32 <id> 23 
+r58
+Stack: 0 STMT 2 if 12 ( 32 ID 
+goto 40
+Stack: 0 STMT 2 if 12 ( 32 ID 40 
+r42
+Stack: 0 STMT 2 if 12 ( 32 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 TERM 
+goto 36
+Stack: 0 STMT 2 if 12 ( 32 TERM 36 
+r34
+Stack: 0 STMT 2 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 
+s61
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 
+s45
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 <num> 45 
+r59
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 NUM 
+goto 41
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 NUM 41 
+r43
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM 
+goto 89
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 > 61 TERM 89 
+r30
+Stack: 0 STMT 2 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 
+s84
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 
+s103
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 
+s12
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 
+s32
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 
+s23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 <id> 23 
+r58
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 
+goto 40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 40 
+r42
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 
+goto 36
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 36 
+r34
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s61
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 
+s45
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 <num> 45 
+r59
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 
+goto 41
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 41 
+r43
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 
+goto 89
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 89 
+r30
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s84
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 
+s103
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 
+s12
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 
+s32
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 
+s23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 <id> 23 
+r58
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 
+goto 40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 40 
+r42
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 
+goto 36
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 36 
+r34
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s61
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 
+s45
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 <num> 45 
+r59
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 
+goto 41
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 41 
+r43
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 
+goto 89
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 89 
+r30
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s84
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 
+s103
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 
+s12
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 
+s32
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 
+s23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 <id> 23 
+r58
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 
+goto 40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 ID 40 
+r42
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 
+goto 36
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 TERM 36 
+r34
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s61
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 
+s45
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 <num> 45 
+r59
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 
+goto 41
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 NUM 41 
+r43
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 
+goto 89
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 > 61 TERM 89 
+r30
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 
+goto 55
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 
+s84
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 
+s103
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 
+s23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 <id> 23 
+r58
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 
+goto 16
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 
+s50
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 
+s45
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 <num> 45 
+r59
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 NUM 
+goto 41
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 NUM 41 
+r43
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM3 
+goto 38
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM3 38 
+r40
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM2 
+goto 37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM2 37 
+r37
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM 
+goto 36
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 TERM 36 
+r34
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 EXPR 
+goto 74
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ID 16 = 50 EXPR 74 
+r27
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ASSIGN 
+goto 8
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ASSIGN 8 
+s26
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 ASSIGN 8 ; 26 
+r8
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 
+goto 2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 
+r2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 
+goto 109
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 
+s113
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 } 113 
+r23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 IF 
+goto 4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 IF 4 
+r4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 
+goto 2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 
+r2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 
+goto 109
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 
+s113
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 } 113 
+r23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 IF 
+goto 4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 IF 4 
+r4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 
+goto 2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 
+r2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 
+goto 109
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 
+s113
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 } 113 
+r23
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 IF 
+goto 4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 IF 4 
+r4
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 
+goto 2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 
+r2
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 
+goto 109
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 
+s113
+Stack: 0 STMT 2 if 12 ( 32 EXPR 55 ) 84 { 103 STMTS 109 } 113 
+r23
+Stack: 0 STMT 2 IF 
+goto 4
+Stack: 0 STMT 2 IF 4 
+r4
+Stack: 0 STMT 2 STMT 
+goto 2
+Stack: 0 STMT 2 STMT 2 
+r2
+Stack: 0 STMT 2 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMTS 24 
+r1
+Stack: 0 STMTS 
+goto 1
+Parsing Successful with no errors.
+
+
+The intermediate three address code generated is:
+t0 := 10
+a := t0
+
+t1 := 1
+t2 := a > t1
+if (t2) goto l6
+goto l7
+l6:
+
+t3 := 2
+t4 := a > t3
+if (t4) goto l4
+goto l5
+l4:
+
+t5 := 3
+t6 := a > t5
+if (t6) goto l2
+goto l3
+l2:
+
+t7 := 5
+t8 := a > t7
+if (t8) goto l0
+goto l1
+l0:
+t9 := 11
+a := t9
+
+l1:
+
+
+l3:
+
+
+l5:
+
+
+l7:
+
+

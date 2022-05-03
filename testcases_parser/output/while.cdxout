@@ -1,0 +1,280 @@
+Stack: 0 
+s17
+Stack: 0 int 17 
+r52
+Stack: 0 TYPE 
+goto 11
+Stack: 0 TYPE 11 
+s23
+Stack: 0 TYPE 11 <id> 23 
+r58
+Stack: 0 TYPE 11 ID 
+goto 29
+Stack: 0 TYPE 11 ID 29 
+s53
+Stack: 0 TYPE 11 ID 29 = 53 
+s45
+Stack: 0 TYPE 11 ID 29 = 53 <num> 45 
+r59
+Stack: 0 TYPE 11 ID 29 = 53 NUM 
+goto 41
+Stack: 0 TYPE 11 ID 29 = 53 NUM 41 
+r43
+Stack: 0 TYPE 11 ID 29 = 53 TERM3 
+goto 38
+Stack: 0 TYPE 11 ID 29 = 53 TERM3 38 
+r40
+Stack: 0 TYPE 11 ID 29 = 53 TERM2 
+goto 37
+Stack: 0 TYPE 11 ID 29 = 53 TERM2 37 
+r37
+Stack: 0 TYPE 11 ID 29 = 53 TERM 
+goto 36
+Stack: 0 TYPE 11 ID 29 = 53 TERM 36 
+r34
+Stack: 0 TYPE 11 ID 29 = 53 EXPR 
+goto 81
+Stack: 0 TYPE 11 ID 29 = 53 EXPR 81 
+r15
+Stack: 0 TYPE 11 ID_MAYBE_INIT 
+goto 31
+Stack: 0 TYPE 11 ID_MAYBE_INIT 31 
+r13
+Stack: 0 TYPE 11 DEFN_LIST 
+goto 30
+Stack: 0 TYPE 11 DEFN_LIST 30 
+r11
+Stack: 0 DEFN 
+goto 9
+Stack: 0 DEFN 9 
+s27
+Stack: 0 DEFN 9 ; 27 
+r9
+Stack: 0 STMT 
+goto 2
+Stack: 0 STMT 2 
+s17
+Stack: 0 STMT 2 int 17 
+r52
+Stack: 0 STMT 2 TYPE 
+goto 11
+Stack: 0 STMT 2 TYPE 11 
+s23
+Stack: 0 STMT 2 TYPE 11 <id> 23 
+r58
+Stack: 0 STMT 2 TYPE 11 ID 
+goto 29
+Stack: 0 STMT 2 TYPE 11 ID 29 
+s53
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 
+s45
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 <num> 45 
+r59
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 NUM 
+goto 41
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 NUM 41 
+r43
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM3 
+goto 38
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM3 38 
+r40
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM2 
+goto 37
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM2 37 
+r37
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM 
+goto 36
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 TERM 36 
+r34
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 EXPR 
+goto 81
+Stack: 0 STMT 2 TYPE 11 ID 29 = 53 EXPR 81 
+r15
+Stack: 0 STMT 2 TYPE 11 ID_MAYBE_INIT 
+goto 31
+Stack: 0 STMT 2 TYPE 11 ID_MAYBE_INIT 31 
+r13
+Stack: 0 STMT 2 TYPE 11 DEFN_LIST 
+goto 30
+Stack: 0 STMT 2 TYPE 11 DEFN_LIST 30 
+r11
+Stack: 0 STMT 2 DEFN 
+goto 9
+Stack: 0 STMT 2 DEFN 9 
+s27
+Stack: 0 STMT 2 DEFN 9 ; 27 
+r9
+Stack: 0 STMT 2 STMT 
+goto 2
+Stack: 0 STMT 2 STMT 2 
+s14
+Stack: 0 STMT 2 STMT 2 while 14 
+s34
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 
+s23
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 <id> 23 
+r58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 ID 
+goto 40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 ID 40 
+r42
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM3 
+goto 38
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM3 38 
+r40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM2 
+goto 37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM2 37 
+r37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM 
+goto 36
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 TERM 36 
+r34
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 
+goto 58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 
+s62
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 
+s23
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 <id> 23 
+r58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 ID 
+goto 40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 ID 40 
+r42
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM3 
+goto 38
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM3 38 
+r40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM2 
+goto 37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM2 37 
+r37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM 
+goto 90
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 < 62 TERM 90 
+r31
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 
+goto 58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 
+s86
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 
+s105
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 
+s23
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 <id> 23 
+r58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 
+goto 16
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 
+s50
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 
+s23
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 <id> 23 
+r58
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 ID 
+goto 40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 ID 40 
+r42
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM3 
+goto 38
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM3 38 
+r40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM2 
+goto 37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM2 37 
+r37
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 
+goto 36
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 
+s65
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 
+s45
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 <num> 45 
+r59
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 NUM 
+goto 41
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 NUM 41 
+r43
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 TERM3 
+goto 38
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 TERM3 38 
+r40
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 TERM2 
+goto 93
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 + 65 TERM2 93 
+r35
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 
+goto 36
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 TERM 36 
+r34
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 EXPR 
+goto 74
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ID 16 = 50 EXPR 74 
+r27
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ASSIGN 
+goto 8
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ASSIGN 8 
+s26
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 ASSIGN 8 ; 26 
+r8
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMT 
+goto 2
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMT 2 
+r2
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMTS 
+goto 111
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMTS 111 
+s116
+Stack: 0 STMT 2 STMT 2 while 14 ( 34 EXPR 58 ) 86 { 105 STMTS 111 } 116 
+r25
+Stack: 0 STMT 2 STMT 2 WHILE 
+goto 6
+Stack: 0 STMT 2 STMT 2 WHILE 6 
+r6
+Stack: 0 STMT 2 STMT 2 STMT 
+goto 2
+Stack: 0 STMT 2 STMT 2 STMT 2 
+r2
+Stack: 0 STMT 2 STMT 2 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMT 2 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMT 2 STMTS 24 
+r1
+Stack: 0 STMT 2 STMTS 
+goto 24
+Stack: 0 STMT 2 STMTS 24 
+r1
+Stack: 0 STMTS 
+goto 1
+Parsing Successful with no errors.
+
+
+The intermediate three address code generated is:
+t0 := 10
+a := t0
+t1 := 20
+b := t1
+l0:
+
+
+t2 := a < b
+if (t2) goto l1
+goto l2
+l1:
+
+t3 := 1
+t4 := a + t3
+a := t4
+
+goto l0
+l2:
+
+
