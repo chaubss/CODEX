@@ -1,0 +1,5 @@
+int x = 23;
+int y = 12;
+int z = 2;
+
+int a = (x + (y + z)) * ((x - y) / z);
