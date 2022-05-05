@@ -264,17 +264,13 @@ t1 := 20
 b := t1
 l0:
 
-
 t2 := a < b
 if (t2) goto l1
 goto l2
 l1:
-
 t3 := 1
 t4 := a + t3
 a := t4
-
 goto l0
 l2:
-
 
