@@ -1,6 +1,6 @@
 /* A program to compute factorials */
 
-int fact( int n) {
+/*int fact( int n) {
     if (n <= 1) {
         return 1;
     } else {
@@ -17,4 +17,21 @@ void main() {
         writeln();
         x = x + 1;
     }
+}*/
+// A calculator
+int main() {
+    int operation = input("Enter a number for operation 0 for +, 1 for -, 2 for *, 3 for /");
+    int first = input("Enter first number: ");
+    int second = input("Enter second number: ");
+    if (operation == 0) {
+        print(first + second);
+    } else if (operation == 1) {
+        print(first - second);
+    } else if (operation == 2) {
+        print(first * second);
+    } else {
+        print(first / second);
+    }
+ 
+    return 0;
 }

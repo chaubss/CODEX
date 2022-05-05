@@ -15,6 +15,14 @@ std::string Parser::generateTemporaryToken() {
 std::string Parser::generateLabelToken() {
     return "l" + std::to_string(labelTokenIndex++);
 }
+std::string mergeLines(std::string a, std::string b){
+    if(a.length()>0&&b.length()>0){
+        return a+"\n"+b;
+    }
+    else if(a.length()>0)
+        return a;
+    return b;
+}
 
 void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
     SemanticObject so;
@@ -29,7 +37,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             SemanticObject stmt = stack.back();
             stack.pop_back();
             
-            so.code = stmt.code + "\n" + stmts.code;
+            // so.code = stmt.code + "\n" + stmts.code;
+            so.code = mergeLines(stmt.code, stmts.code);
             break;
         }
         case 2: {
@@ -82,7 +91,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             SemanticObject imi = stack.back();
             stack.pop_back();
             so.temp = "";
-            so.code = imi.code + "\n" + defnList.code;
+            // so.code = imi.code + "\n" + defnList.code;
+            so.code = mergeLines(imi.code, defnList.code);
             break;
         }
         case 13: {
@@ -104,7 +114,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back(); stack.pop_back();
             SemanticObject id = stack.back();
             stack.pop_back();
-            so.code = expr.code + "\n" + id.temp + " := " + expr.temp;
+            // so.code = expr.code + "\n" + id.temp + " := " + expr.temp;
+            so.code = mergeLines(expr.code,id.temp + " := " + expr.temp);
             break;
         }
         case 16: {
@@ -127,7 +138,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             std::string skipL = generateLabelToken();
 
 
-            so.code = expr.code + "\nif(" + expr.temp + ") goto " + ifL + "\ngoto " + elseL + "\n" + ifL + ":\n" + stmt1.code + "\ngoto " + skipL + "\n" + elseL + ":\n" + stmt2.code + "\n" + skipL + ":\n";
+            // so.code = expr.code + "\nif(" + expr.temp + ") goto " + ifL + "\ngoto " + elseL + "\n" + ifL + ":\n" + stmt1.code + "\ngoto " + skipL + "\n" + elseL + ":\n" + stmt2.code + "\n" + skipL + ":\n";
+            so.code = mergeLines(expr.code, "\nif(" + expr.temp + ") goto " + ifL + "\ngoto " + elseL + "\n" + ifL + ":\n" + stmt1.code + "\ngoto " + skipL + "\n" + elseL + ":\n" + stmt2.code + "\n" + skipL + ":\n");
             break;
         }
         case 22: {
@@ -142,9 +154,12 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             std::string elseL = generateLabelToken();
             std::string skipL = generateLabelToken();
             so.temp = "";
-            so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + elseL \
+            // so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + elseL \
+            // + "\n" + ifL + ":\n" + stmts.code + "\ngoto " + skipL + "\n" + \
+            // elseL + ":\n" + innerIf.code + "\n" + skipL + ":\n";
+            so.code =mergeLines(expr.code, "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + elseL \
             + "\n" + ifL + ":\n" + stmts.code + "\ngoto " + skipL + "\n" + \
-            elseL + ":\n" + innerIf.code + "\n" + skipL + ":\n";
+            elseL + ":\n" + innerIf.code + "\n" + skipL + ":\n");
             break;
         }
         case 23: {
@@ -160,7 +175,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             so.temp = "";
             std::string ifL = generateLabelToken();
             std::string skipL = generateLabelToken();
-            so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\n" + skipL + ":\n";
+            // so.code = expr.code + "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\n" + skipL + ":\n";
+            so.code = mergeLines(expr.code, "\nif (" + expr.temp + ") goto " + ifL + "\ngoto " + skipL + "\n" + ifL + ":\n" + stmts.code + "\n" + skipL + ":\n");
             break;
         }
         case 25: {
@@ -185,7 +201,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             SemanticObject id = stack.back();
             stack.pop_back();
             so.temp = "";
-            so.code = expr.code + "\n" + id.temp + " := " + expr.temp;
+            // so.code = expr.code + "\n" + id.temp + " := " + expr.temp;
+            so.code = mergeLines(expr.code, id.temp + " := " + expr.temp);
             break;
         }
         case 28: {
@@ -196,7 +213,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -208,7 +226,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -220,7 +239,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -232,7 +252,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -244,7 +265,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -256,7 +278,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -271,7 +294,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -283,7 +307,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -298,7 +323,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -310,7 +336,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back();
             SemanticObject op1 = stack.back();
             stack.pop_back();
-            so.code = op1.code + "\n" + op2.code + "\n";
+            // so.code = op1.code + "\n" + op2.code + "\n";
+            so.code = mergeLines(op1.code, op2.code) + "\n";
             so.code += so.temp + " := " + op1.temp + " " + op.temp + " " + op2.temp;
             break;
         }
@@ -355,7 +382,8 @@ void  Parser::modifyStack(std::vector<SemanticObject> &stack, int ruleNumber) {
             stack.pop_back(); stack.pop_back();
             SemanticObject arg = stack.back();
             stack.pop_back();
-            so.code = arg.code + "\n" + args.code;
+            // so.code = arg.code + "\n" + args.code;
+            so.code = mergeLines(arg.code, args.code);
             break;
         }
         case 49: {

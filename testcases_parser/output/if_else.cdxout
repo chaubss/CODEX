@@ -386,37 +386,31 @@ Parsing Successful with no errors.
 The intermediate three address code generated is:
 t0 := 232
 x := t0
-
 t1 := 20
 t2 := x < t1
+
 if (t2) goto l3
 goto l4
 l3:
-
 t3 := 1
 t4 := x + t3
 x := t4
-
 goto l5
 l4:
-
 t5 := 10
 t6 := x < t5
+
 if(t6) goto l0
 goto l1
 l0:
-
 t7 := 1
 t8 := x - t7
 x := t8
-
 goto l2
 l1:
 t9 := 1
 x := t9
-
 l2:
 
 l5:
-
 
