@@ -1,5 +1,7 @@
 # CODEX
-This is our submission for the Compiler Construction group assignment (Phase I).
+CODEX is a C++ like programming language consisting of a lexer, parser and intermediate code generator.
+
+It is our submission for the Compiler Construction group assignment.
 The group members include:
 1. Aryan Chaubal (2019A7PS0130H)
 2. Samarth Kumar Manish Kumar Jain (2019A7PS0179H)
@@ -22,7 +24,7 @@ This will create an executable `lexer`, run it:
 ```
 ./lexer <input file>
 ```
-### Running the testcases ( For lexer only )
+### Running the testcases
 Several testcases have been provided in the `testcases/input` directory. You can run them all at once by running the `run_testcases.sh` script.
 1. Add your testcases to the `testcases/input` directory.
 2. Give permission to run the shell script:
